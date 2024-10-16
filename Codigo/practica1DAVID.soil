@@ -1,0 +1,110 @@
+
+reset
+
+--Valores Iniciales
+!new Avion('av1')
+!new Avion('av2')
+!new Avion('av3')
+!new Avion('av4')
+!new Avion('av5')
+
+!new Aeropuerto('Madrid_Barajas')
+!Madrid_Barajas.ciudad := 'Madrid_Barajas'
+!new Aeropuerto('Barcelona_ElPrat')
+!Barcelona_ElPrat.ciudad := 'Barcelona_ElPrat'
+
+!new Aerolinea('Vueling')
+!Vueling.nombre := 'Vueling'
+!new Aerolinea('Iberia')
+!Iberia.nombre := 'Iberia'
+
+!new Hangar('Hangar1Barcelona')
+!Hangar1Barcelona.capacidad := 2
+!new Hangar('Hangar1Madrid')
+!Hangar1Madrid.capacidad := 3
+!new Hangar('Hangar2Madrid')
+!Hangar2Madrid.capacidad := 4
+
+!new Desguace('DesguaceBarcelona')
+!DesguaceBarcelona.capacidad := 20
+!new Desguace('DesguaceMadrid')
+!DesguaceMadrid.capacidad := 30
+!new Desguace('DesguaceMadrid2')
+!DesguaceMadrid.capacidad := 25
+
+!new Vuelo('vuelo1')
+!vuelo1.identificador := '0911'
+!vuelo1.numeroKm := 1300
+!new Vuelo('vuelo2')
+!vuelo2.identificador := '3361'
+!vuelo2.numeroKm := 1150
+!new Vuelo('vuelo3')
+!vuelo3.identificador := '9778'
+!vuelo3.numeroKm := 900
+
+!new Piloto('pil1')
+!pil1.nombre := 'ALonso'
+!pil1.edad := 42
+!new Piloto('pil2')
+!pil2.nombre := 'Nadal'
+!pil2.edad := 55
+!new Piloto('pil3')
+!pil3.nombre := 'Lewis'
+!pil3.edad := 30
+!new Piloto('pil4')
+!pil4.nombre := 'Fernando'
+!pil4.edad := 58
+
+!new Pasajero('pasajero1')
+!pasajero1.nombre := 'Andres'
+!pasajero1.edad := 29
+!new Pasajero('pasajero2')
+!pasajero2.nombre := 'Pedro'
+!pasajero2.edad := 49
+!new Pasajero('pasajero3')
+!pasajero3.nombre := 'Ferres'
+!pasajero3.edad := 31
+
+!insert(av1,Vueling) into Contrato
+!Contrato1.numeroDeMeses := 18
+!Contrato1.precioPorMes := 12000
+!insert(av2,Vueling) into Contrato
+!Contrato2.numeroDeMeses := 12
+!Contrato2.precioPorMes := 21000
+!insert(av3,Iberia) into Contrato
+!Contrato3.numeroDeMeses := 24
+!Contrato3.precioPorMes := 16000
+
+!insert(pil1,Vueling) into pilotosDeAerolinea
+!insert(pil1,Iberia) into pilotosDeAerolinea
+!insert(pil2,Iberia) into pilotosDeAerolinea
+
+!insert(Madrid_Barajas,Hangar1Barcelona) into hangarEnAeropuerto
+!insert(Madrid_Barajas,Hangar1Madrid) into hangarEnAeropuerto 
+!insert(Barcelona_ElPrat,Hangar2Madrid) into hangarEnAeropuerto
+
+!insert(Madrid_Barajas,DesguaceMadrid) into desguaceEnAeropuerto
+!insert(Madrid_Barajas,DesguaceMadrid2) into desguaceEnAeropuerto       --AQUI PONEMOS ERROR: 2 DESGUACES EN EL MISMO AEROPUERTO
+!insert(Barcelona_ElPrat,DesguaceBarcelona) into desguaceEnAeropuerto
+
+!insert(av1,vuelo1) into vuelos
+!insert(av2,vuelo2) into vuelos
+!insert(av3,vuelo3) into vuelos
+
+!insert(vuelo1,pasajero1) into viajeros
+!insert(vuelo2,pasajero2) into viajeros
+!insert(vuelo3,pasajero3) into viajeros
+
+!insert(vuelo1,pil1) into pilotoPrimario
+!insert(vuelo2,pil3) into pilotoPrimario
+!insert(vuelo3,pil4) into pilotoPrimario
+
+!insert(vuelo1, pil2) into pilotoSecundario
+
+!insert(av4,Hangar1Barcelona) into avionEnHangar
+
+!insert(av5,DesguaceMadrid) into avionEnDesguace
+
+
+
+
