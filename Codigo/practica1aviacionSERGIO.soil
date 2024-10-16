@@ -1,0 +1,38 @@
+reset
+!new Avion('Boeing')
+!new Aerolinea('Ryanair')
+!Ryanair.nombre := 'ryanair'
+!new Vuelo('agp_bru')
+!agp_bru.identificador := 'AGP_BRU'
+!agp_bru.numeroKm := 2100
+!new Piloto('piloto1')
+!new Piloto('piloto2')
+!piloto1.nombre := 'Julio'
+!piloto1.edad := 70
+!piloto2.nombre := 'Pedro'
+!piloto2.edad := 12
+!piloto1.kmTotales := 100
+!piloto1.esPro := true
+!new Pasajero('pasajero1')
+!pasajero1.nombre := 'Paco'
+!pasajero1.edad := 13
+!new Hangar('hangar1')
+!hangar1.capacidad := 5
+!new Aeropuerto('aeropuerto')
+!aeropuerto.ciudad := 'malaga'
+!new Desguace('desguace')
+!desguace.capacidad := 2
+!create contrato : Contrato between (Boeing, Ryanair)
+!contrato.numeroDeMeses := 13
+!contrato.precioPorMes := 2000.12
+
+!insert(piloto1, Ryanair) into pilotosDeAerolinea
+!insert(aeropuerto, hangar1) into hangarEnAeropuerto
+!insert(aeropuerto, desguace) into desguaceEnAeropuerto
+!insert(Boeing, agp_bru) into vuelos
+!insert(agp_bru, pasajero1) into viajeros
+!insert(agp_bru, piloto1) into pilotoPrimario
+!insert(agp_bru, piloto2) into pilotoSecundario
+--!insert(Boeing, hangar1) into avionEnHangar
+--!insert(Boeing, desguace) into avionEnDesguace
+!insert(Boeing, agp_bru) into volando

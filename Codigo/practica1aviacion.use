@@ -1,0 +1,145 @@
+model AviacionModel
+
+-----------Clases---------------------
+class Avion
+attributes
+numeroVuelos : Integer derive : (self.vuelosAsignados->size())
+numeroKm : Integer derive : (self.vuelosAsignados.numeroKm->sum())
+end
+
+class Aerolinea
+attributes
+nombre : String
+end
+
+class Aeropuerto
+attributes
+ciudad : String
+end
+
+class Hangar
+attributes
+capacidad : Integer
+end
+
+class Desguace
+attributes
+capacidad : Integer
+end
+
+class Vuelo
+attributes
+identificador : String
+numeroKm : Integer
+end
+
+class Piloto < Persona
+attributes
+kmTotales : Integer derive : (self.vuelosComoPrimario.numeroKm->sum() + self.vuelosComoSecundario.numeroKm->sum())
+esPro : Boolean derive : (self.vuelosComoPrimario->size() >= 1000 and self.vuelosComoSecundario->size() >= 2000)
+end
+
+class Pasajero < Persona
+end
+
+class Persona
+attributes
+nombre : String
+edad : Integer
+end
+--------Fin de clases-----------------
+
+----------Asociaciones----------------
+association pilotosDeAerolinea between
+    Piloto [*] role pilotosContratados
+    Aerolinea [0..2] role aerolineas
+end
+
+composition hangarEnAeropuerto between
+    Aeropuerto [1] role pertenecenAAeropuerto
+    Hangar [1..*] role hangares
+end
+
+composition desguaceEnAeropuerto between
+    Aeropuerto [1] role pertenceAAeropuerto
+    Desguace [1] role desguace
+end
+
+association vuelos between
+    Avion [1] role realizadoPor
+    Vuelo [*] role vuelosAsignados
+end
+
+association volando between
+    Avion [1] role enCurso
+    Vuelo [0..1] role enVuelo
+end
+
+association viajeros between
+    Vuelo [*] role viajaEn
+    Pasajero [*] role pasajeros
+end
+
+association pilotoPrimario between
+    Vuelo [*] role vuelosComoPrimario
+    Piloto [1] role pilotadoPrimario
+end
+
+association pilotoSecundario between
+    Vuelo [*] role vuelosComoSecundario
+    Piloto [0..1] role pilotadoSecundario
+end
+
+association avionEnHangar between
+    Avion [*] role avionesEstacionadoEnHangares
+    Hangar [0..1] role estacionadoEnHangar
+end
+
+association avionEnDesguace between
+    Avion [*] role avionesRetirados
+    Desguace [0..1] role retiradoADesguace
+end
+--------Fin de asociaciones-----------
+
+--------Clases de asociación----------
+associationclass Contrato between
+    Avion [*] role tiene
+    Aerolinea [*] role perteneceAerolinea
+attributes
+    numeroDeMeses : Integer
+    precioPorMes : Real
+    precioTotal : Real derive : self.numeroDeMeses * self.precioPorMes
+end
+
+-----------Invariantes---------
+constraints
+
+-- Todos los nombres de las aerolineas deben ser distintos
+context Aerolinea
+    inv nombreUnicoAerolinea : Aerolinea.allInstances->isUnique(nombre)
+
+context Avion
+-- Un avion o esta en Hanga o esta en Desguace o esta volando
+    inv SiHangarNoDesguaceNoVolando : self.retiradoADesguace.oclIsUndefined() and self.enVuelo.oclIsUndefined() implies not self.estacionadoEnHangar.oclIsUndefined()
+    inv SiEnVueloNoHangarNoDesguace : self.retiradoADesguace.oclIsUndefined() and self.estacionadoEnHangar.oclIsUndefined() implies not self.enVuelo.oclIsUndefined() 
+    inv SiDesguaceNoVolandoNoHangar : self.enVuelo.oclIsUndefined() and self.estacionadoEnHangar.oclIsUndefined() implies not self.retiradoADesguace.oclIsUndefined()
+  
+-- Un avion esta en Desguace si tiene mas de 1000 vuelos 
+    inv estaEnDesguace : self.numeroVuelos >= 1000  implies not self.retiradoADesguace.oclIsUndefined() 
+-- Si hay capacidad, el avion puede estar en hangar
+context Hangar
+    inv hayCapacidadHangar : self.capacidad >= self.avionesEstacionadoEnHangares->size()
+
+-- Si hay capacidad, el avion puede estar en desguace
+context Desguace
+    inv hayCapacidadDesguace : self.capacidad >= self.avionesRetirados->size()
+
+-- Solo debe haber un aeropuerto en cada ciudad
+context Aeropuerto
+    inv unicoAeropuertoPorCiudad: Aeropuerto.allInstances()->isUnique(ciudad)
+
+-- Cada identificador de un vuelo debe ser unico
+-- El piloto principal debe ser diferente al piloto secundario
+context Vuelo
+    inv identificadorUnico: Vuelo.allInstances()->isUnique(identificador)
+    inv pilotoPrincipalDistintoSecundarioEnVuelo : self.pilotadoPrimario <> self.pilotadoSecundario

@@ -1,0 +1,97 @@
+reset
+!new Avion('B737')
+!new Avion('B777')
+!new Avion('A320')
+!new Avion('A350')
+!new Avion('C5_Galaxy')
+
+!new Aeropuerto('Madrid_Barajas')
+!Madrid_Barajas.ciudad := 'Madrid'
+
+!new Aeropuerto('Malaga_AGP')
+!Malaga_AGP.ciudad := 'Málaga'
+
+!new Aerolinea('Emirates_Airline')
+!Emirates_Airline.nombre := 'Emirates Airline'
+!new Aerolinea('Qatar_Airways')
+!Qatar_Airways.nombre := 'Qatar Airways'
+!new Aerolinea('Jetstar')
+!Jetstar.nombre := 'Jetstar'
+!new Aerolinea('Air_France')
+!Air_France.nombre := 'Air France KLM'
+
+!new Hangar('Hangar1Malaga')
+!Hangar1Malaga.capacidad := 5
+
+!new Hangar('Hangar1Madrid')
+!Hangar1Madrid.capacidad := 7
+
+!new Hangar('Hangar2Madrid')
+!Hangar2Madrid.capacidad := 7
+
+!new Desguace('DesguaceMalaga')
+!DesguaceMalaga.capacidad := 40
+
+!new Desguace('DesguaceMadrid')
+!DesguaceMadrid.capacidad := 60
+
+!new Vuelo('Malaga_Madrid')
+!Malaga_Madrid.identificador := 'AGP-MAD-1234'
+!Malaga_Madrid.numeroKm := 431
+
+!new Piloto('Piloto1')
+!Piloto1.nombre := 'Manuel'
+!Piloto1.edad := 33
+!new Piloto('Piloto2')
+!Piloto2.nombre := 'Carmen'
+!Piloto2.edad := 25
+!new Piloto('Piloto3')
+!Piloto3.nombre := 'Ana'
+!Piloto3.edad := 37
+!new Piloto('Piloto4')
+!Piloto4.nombre := 'John'
+!Piloto4.edad := 29
+
+!new Pasajero('Pasajero1')
+!Pasajero1.nombre := 'Maria'
+!Pasajero1.edad := 18
+!new Pasajero('Pasajero2')
+!Pasajero2.nombre := 'Mario'
+!Pasajero2.edad := 26
+!new Pasajero('Pasajero3')
+!Pasajero3.nombre := 'Hugo'
+!Pasajero3.edad := 48
+
+!insert(Malaga_AGP, DesguaceMalaga) into desguaceEnAeropuerto
+!insert(Malaga_AGP, Hangar1Malaga) into hangarEnAeropuerto
+!insert(Madrid_Barajas, DesguaceMadrid) into desguaceEnAeropuerto
+!insert(Madrid_Barajas, Hangar1Madrid) into hangarEnAeropuerto
+!insert(Madrid_Barajas, Hangar2Madrid) into hangarEnAeropuerto
+
+!insert(Piloto1, Jetstar) into pilotosDeAerolinea
+!insert(Piloto1, Qatar_Airways) into pilotosDeAerolinea
+!insert(Piloto2, Emirates_Airline) into pilotosDeAerolinea
+!insert(Piloto3, Emirates_Airline) into pilotosDeAerolinea
+!insert(Piloto4, Air_France) into pilotosDeAerolinea
+
+!insert(B777, Hangar1Madrid) into avionEnHangar
+!insert(A350, Hangar1Madrid) into avionEnHangar
+!insert(C5_Galaxy, Hangar1Madrid) into avionEnHangar
+!insert(B737, Hangar1Madrid) into avionEnHangar
+
+!insert(B737, Malaga_Madrid) into vuelos
+
+!insert(A320, Malaga_Madrid) into volando
+
+!insert(Malaga_Madrid, Pasajero1) into viajeros
+!insert(Malaga_Madrid, Pasajero2) into viajeros
+!insert(Malaga_Madrid, Pasajero3) into viajeros
+
+!insert(Malaga_Madrid, Piloto1) into pilotoPrimario
+!insert(Malaga_Madrid, Piloto4) into pilotoSecundario
+
+!insert(B737, Jetstar) into Contrato
+!Contrato1.numeroDeMeses := 5
+!Contrato1.precioPorMes := 8500.0
+
+
