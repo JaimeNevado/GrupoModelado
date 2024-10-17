@@ -120,9 +120,9 @@ context Aerolinea
 
 context Avion
 -- Un avion o esta en Hanga o esta en Desguace o esta volando
-    inv SiHangarNoDesguaceNoVolando : self.retiradoADesguace.oclIsUndefined() and self.enVuelo.oclIsUndefined() implies not self.estacionadoEnHangar.oclIsUndefined()
-    inv SiEnVueloNoHangarNoDesguace : self.retiradoADesguace.oclIsUndefined() and self.estacionadoEnHangar.oclIsUndefined() implies not self.enVuelo.oclIsUndefined() 
-    inv SiDesguaceNoVolandoNoHangar : self.enVuelo.oclIsUndefined() and self.estacionadoEnHangar.oclIsUndefined() implies not self.retiradoADesguace.oclIsUndefined()
+    inv oVuelaOHangarODesguace : (self.retiradoADesguace.oclIsUndefined() and self.enVuelo.oclIsUndefined() and not self.estacionadoEnHangar.oclIsUndefined())
+    or (self.retiradoADesguace.oclIsUndefined() and not self.enVuelo.oclIsUndefined() and self.estacionadoEnHangar.oclIsUndefined())
+    or (not self.retiradoADesguace.oclIsUndefined() and self.enVuelo.oclIsUndefined() and self.estacionadoEnHangar.oclIsUndefined())
   
 -- Un avion esta en Desguace si tiene mas de 1000 vuelos 
     inv estaEnDesguace : self.numeroVuelos >= 1000  implies not self.retiradoADesguace.oclIsUndefined() 
@@ -134,9 +134,11 @@ context Hangar
 context Desguace
     inv hayCapacidadDesguace : self.capacidad >= self.avionesRetirados->size()
 
+
 -- Solo debe haber un aeropuerto en cada ciudad
 context Aeropuerto
     inv unicoAeropuertoPorCiudad: Aeropuerto.allInstances()->isUnique(ciudad)
+
 
 -- Cada identificador de un vuelo debe ser unico
 -- El piloto principal debe ser diferente al piloto secundario
