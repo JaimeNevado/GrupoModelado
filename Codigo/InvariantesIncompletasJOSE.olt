@@ -1,0 +1,1729 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram_Layout version="13">
+    <diagramOptions>
+        <autolayout>false</autolayout>
+        <antialiasing>false</antialiasing>
+        <showassocnames>false</showassocnames>
+        <showattributes>true</showattributes>
+        <showmultiplicities>false</showmultiplicities>
+        <showoperations>false</showoperations>
+        <showrolenames>true</showrolenames>
+        <showgrid>false</showgrid>
+        <ShowStates>false</ShowStates>
+    </diagramOptions>
+    <node id="Hangar1Madrid" sizeCalculated="true" type="Object">
+        <name>Hangar1Madrid</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>749.8775814974729</x>
+            <y>224.06532039393772</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="DesguaceMadrid" sizeCalculated="true" type="Object">
+        <name>DesguaceMadrid</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>775.7345323063932</x>
+            <y>529.9852206023224</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="pasajero1" sizeCalculated="true" type="Object">
+        <name>pasajero1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>968.0373034255981</x>
+            <y>441.102375507894</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="pasajero2" sizeCalculated="true" type="Object">
+        <name>pasajero2</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>92.85209867988704</x>
+            <y>204.9143203838649</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="Barcelona_ElPrat" sizeCalculated="true" type="Object">
+        <name>Barcelona_ElPrat</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>62.77233488822105</x>
+            <y>520.61645591919</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="pil1" sizeCalculated="true" type="Object">
+        <name>pil1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>546.5024455524253</x>
+            <y>230.5216918039423</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="Contrato1" sizeCalculated="true" type="Object">
+        <name>Contrato1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToCorner">
+            <userOffsetX>-30.0</userOffsetX>
+            <userOffsetY>-56.0</userOffsetY>
+            <basisDeltaX>ABSOLUTE</basisDeltaX>
+            <deltaX>0.0</deltaX>
+            <maxDeltaX>1.7976931348623157E308</maxDeltaX>
+            <basisDeltaY>ABSOLUTE</basisDeltaY>
+            <deltaY>-54.0</deltaY>
+            <maxDeltaY>1.7976931348623157E308</maxDeltaY>
+            <corner>NORTH</corner>
+            <relativeNodeId>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::-1</relativeNodeId>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="DesguaceBarcelona" sizeCalculated="true" type="Object">
+        <name>DesguaceBarcelona</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>520.1170023301659</x>
+            <y>522.7877147865546</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="pil2" sizeCalculated="true" type="Object">
+        <name>pil2</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>66.57635785732828</x>
+            <y>330.86194858348205</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="Hangar1Barcelona" sizeCalculated="true" type="Object">
+        <name>Hangar1Barcelona</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>259.4734579206889</x>
+            <y>350.3045211070795</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="vuelo1" sizeCalculated="true" type="Object">
+        <name>vuelo1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>542.9016806983625</x>
+            <y>446.0906403425215</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="vuelo2" sizeCalculated="true" type="Object">
+        <name>vuelo2</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>90.46303572693921</x>
+            <y>56.816378713661834</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="Iberia" sizeCalculated="true" type="Object">
+        <name>Iberia</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>275.47249316968316</x>
+            <y>131.5487846430193</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="Madrid_Barajas" sizeCalculated="true" type="Object">
+        <name>Madrid_Barajas</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>754.1020683791749</x>
+            <y>335.6854920824836</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="av2" sizeCalculated="true" type="Object">
+        <name>av2</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>547.1207817939805</x>
+            <y>47.85545168404661</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="Vueling" sizeCalculated="true" type="Object">
+        <name>Vueling</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>817.0884654005129</x>
+            <y>119.10841930989724</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="av1" sizeCalculated="true" type="Object">
+        <name>av1</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>301.0600648042432</x>
+            <y>230.37558212975222</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <edge type="BinaryEdge">
+        <source>av1</source>
+        <target>Hangar1Barcelona</target>
+        <name>avionEnHangar</name>
+        <properties>
+            <edgeproperty id="[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>avionEnHangar</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::WayPoint::0</related0>
+                        <related1>[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>0..1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>estacionadoEnHangar</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>avionesEstacionadoEnHangares</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>36.0</userOffsetX>
+                    <userOffsetY>1.0</userOffsetY>
+                    <attached>[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[avionEnHangar : (avionesEstacionadoEnHangares:av1, estacionadoEnHangar:Hangar1Barcelona)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>Barcelona_ElPrat</source>
+        <target>DesguaceBarcelona</target>
+        <name>desguaceEnAeropuerto</name>
+        <properties>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>desguaceEnAeropuerto</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::WayPoint::0</related0>
+                        <related1>[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>desguace</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>6.0</userOffsetX>
+                    <userOffsetY>9.0</userOffsetY>
+                    <attached>[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>pertenceAAeropuerto</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>10.0</userOffsetX>
+                    <userOffsetY>11.0</userOffsetY>
+                    <attached>[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[desguaceEnAeropuerto : (desguace:DesguaceBarcelona, pertenceAAeropuerto:Barcelona_ElPrat)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>vuelo1</source>
+        <target>pil1</target>
+        <name>pilotoSecundario</name>
+        <properties>
+            <edgeproperty id="[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>pilotoSecundario</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::WayPoint::0</related0>
+                        <related1>[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>0..1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>pilotadoSecundario</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>22.0</userOffsetX>
+                    <userOffsetY>13.0</userOffsetY>
+                    <attached>[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>vuelosComoSecundario</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>58.0</userOffsetX>
+                    <userOffsetY>-5.0</userOffsetY>
+                    <attached>[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[pilotoSecundario : (pilotadoSecundario:pil1, vuelosComoSecundario:vuelo1)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>vuelo1</source>
+        <target>pasajero1</target>
+        <name>viajeros</name>
+        <properties>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>viajeros</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::WayPoint::0</related0>
+                        <related1>[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>pasajeros</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>1.0</userOffsetX>
+                    <userOffsetY>7.0</userOffsetY>
+                    <attached>[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>viajaEn</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>-1.0</userOffsetX>
+                    <userOffsetY>12.0</userOffsetY>
+                    <attached>[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[viajeros : (pasajeros:pasajero1, viajaEn:vuelo1)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>av1</source>
+        <target>DesguaceMadrid</target>
+        <name>avionEnDesguace</name>
+        <properties>
+            <edgeproperty id="[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>avionEnDesguace</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::WayPoint::0</related0>
+                        <related1>[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>retiradoADesguace</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>0..1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>avionesRetirados</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>88.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="true" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToCorner">
+                    <userOffsetX>121.37925769557796</userOffsetX>
+                    <userOffsetY>52.0</userOffsetY>
+                    <basisDeltaX>ABSOLUTE</basisDeltaX>
+                    <deltaX>0.0</deltaX>
+                    <maxDeltaX>1.7976931348623157E308</maxDeltaX>
+                    <basisDeltaY>ABSOLUTE</basisDeltaY>
+                    <deltaY>0.0</deltaY>
+                    <maxDeltaY>1.7976931348623157E308</maxDeltaY>
+                    <corner>NORTH_WEST</corner>
+                    <relativeNodeId>av1</relativeNodeId>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[avionEnDesguace : (avionesRetirados:av1, retiradoADesguace:DesguaceMadrid)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>Madrid_Barajas</source>
+        <target>Hangar1Madrid</target>
+        <name>hangarEnAeropuerto</name>
+        <properties>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>hangarEnAeropuerto</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::WayPoint::0</related0>
+                        <related1>[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1..*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>hangares</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>pertenecenAAeropuerto</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>153.0</userOffsetX>
+                    <userOffsetY>-1.0</userOffsetY>
+                    <attached>[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="true" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToCorner">
+                    <userOffsetX>101.0</userOffsetX>
+                    <userOffsetY>87.31318924934664</userOffsetY>
+                    <basisDeltaX>ABSOLUTE</basisDeltaX>
+                    <deltaX>0.0</deltaX>
+                    <maxDeltaX>1.7976931348623157E308</maxDeltaX>
+                    <basisDeltaY>ABSOLUTE</basisDeltaY>
+                    <deltaY>0.0</deltaY>
+                    <maxDeltaY>1.7976931348623157E308</maxDeltaY>
+                    <corner>NORTH_WEST</corner>
+                    <relativeNodeId>Hangar1Madrid</relativeNodeId>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[hangarEnAeropuerto : (hangares:Hangar1Madrid, pertenecenAAeropuerto:Madrid_Barajas)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>vuelo2</source>
+        <target>pasajero2</target>
+        <name>viajeros</name>
+        <properties>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>viajeros</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::WayPoint::0</related0>
+                        <related1>[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>pasajeros</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>viajaEn</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[viajeros : (pasajeros:pasajero2, viajaEn:vuelo2)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>pil1</source>
+        <target>Vueling</target>
+        <name>pilotosDeAerolinea</name>
+        <properties>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>pilotosDeAerolinea</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::WayPoint::0</related0>
+                        <related1>[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>0..2</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>aerolineas</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>pilotosContratados</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[pilotosDeAerolinea : (aerolineas:Vueling, pilotosContratados:pil1)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>pil2</source>
+        <target>Iberia</target>
+        <name>pilotosDeAerolinea</name>
+        <properties>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>pilotosDeAerolinea</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::WayPoint::0</related0>
+                        <related1>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>0..2</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>aerolineas</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>pilotosContratados</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil2)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>av2</source>
+        <target>vuelo2</target>
+        <name>vuelos</name>
+        <properties>
+            <edgeproperty id="[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>vuelos</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::WayPoint::0</related0>
+                        <related1>[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>vuelosAsignados</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>8.0</userOffsetX>
+                    <userOffsetY>5.0</userOffsetY>
+                    <attached>[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>realizadoPor</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>4.0</userOffsetX>
+                    <userOffsetY>10.0</userOffsetY>
+                    <attached>[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[vuelos : (realizadoPor:av2, vuelosAsignados:vuelo2)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>pil1</source>
+        <target>Iberia</target>
+        <name>pilotosDeAerolinea</name>
+        <properties>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>pilotosDeAerolinea</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::WayPoint::0</related0>
+                        <related1>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>aerolineas</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>0..2</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>pilotosContratados</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>9.0</userOffsetX>
+                    <userOffsetY>6.0</userOffsetY>
+                    <attached>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[pilotosDeAerolinea : (aerolineas:Iberia, pilotosContratados:pil1)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>vuelo1</source>
+        <target>pil1</target>
+        <name>pilotoPrimario</name>
+        <properties>
+            <edgeproperty id="[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>pilotoPrimario</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::WayPoint::0</related0>
+                        <related1>[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>pilotadoPrimario</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>93.0</userOffsetX>
+                    <userOffsetY>12.0</userOffsetY>
+                    <attached>[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>vuelosComoPrimario</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>114.0</userOffsetX>
+                    <userOffsetY>10.0</userOffsetY>
+                    <attached>[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="true" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToCorner">
+                    <userOffsetX>91.35437305479627</userOffsetX>
+                    <userOffsetY>-3.0</userOffsetY>
+                    <basisDeltaX>ABSOLUTE</basisDeltaX>
+                    <deltaX>0.0</deltaX>
+                    <maxDeltaX>1.7976931348623157E308</maxDeltaX>
+                    <basisDeltaY>ABSOLUTE</basisDeltaY>
+                    <deltaY>0.0</deltaY>
+                    <maxDeltaY>1.7976931348623157E308</maxDeltaY>
+                    <corner>NORTH_WEST</corner>
+                    <relativeNodeId>vuelo1</relativeNodeId>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="true" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToCorner">
+                    <userOffsetX>91.05162653200632</userOffsetX>
+                    <userOffsetY>91.0</userOffsetY>
+                    <basisDeltaX>ABSOLUTE</basisDeltaX>
+                    <deltaX>0.0</deltaX>
+                    <maxDeltaX>1.7976931348623157E308</maxDeltaX>
+                    <basisDeltaY>ABSOLUTE</basisDeltaY>
+                    <deltaY>0.0</deltaY>
+                    <maxDeltaY>1.7976931348623157E308</maxDeltaY>
+                    <corner>NORTH_WEST</corner>
+                    <relativeNodeId>pil1</relativeNodeId>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[pilotoPrimario : (pilotadoPrimario:pil1, vuelosComoPrimario:vuelo1)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>Madrid_Barajas</source>
+        <target>DesguaceMadrid</target>
+        <name>desguaceEnAeropuerto</name>
+        <properties>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>desguaceEnAeropuerto</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::WayPoint::0</related0>
+                        <related1>[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>desguace</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>pertenceAAeropuerto</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[desguaceEnAeropuerto : (desguace:DesguaceMadrid, pertenceAAeropuerto:Madrid_Barajas)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>Barcelona_ElPrat</source>
+        <target>Hangar1Barcelona</target>
+        <name>hangarEnAeropuerto</name>
+        <properties>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>hangarEnAeropuerto</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::WayPoint::0</related0>
+                        <related1>[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>hangares</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1..*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>pertenecenAAeropuerto</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[hangarEnAeropuerto : (hangares:Hangar1Barcelona, pertenecenAAeropuerto:Barcelona_ElPrat)]</linkValue>
+    </edge>
+    <edge type="BinaryEdge">
+        <source>av1</source>
+        <target>vuelo1</target>
+        <name>vuelos</name>
+        <properties>
+            <edgeproperty id="[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>vuelos</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::WayPoint::0</related0>
+                        <related1>[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>vuelosAsignados</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>4.0</userOffsetX>
+                    <userOffsetY>8.0</userOffsetY>
+                    <attached>[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>realizadoPor</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>46.0</userOffsetX>
+                    <userOffsetY>12.0</userOffsetY>
+                    <attached>[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="true" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToCorner">
+                    <userOffsetX>192.0</userOffsetX>
+                    <userOffsetY>145.66933570327245</userOffsetY>
+                    <basisDeltaX>ABSOLUTE</basisDeltaX>
+                    <deltaX>0.0</deltaX>
+                    <maxDeltaX>1.7976931348623157E308</maxDeltaX>
+                    <basisDeltaY>ABSOLUTE</basisDeltaY>
+                    <deltaY>0.0</deltaY>
+                    <maxDeltaY>1.7976931348623157E308</maxDeltaY>
+                    <corner>NORTH_WEST</corner>
+                    <relativeNodeId>av1</relativeNodeId>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="true" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToCorner">
+                    <userOffsetX>-5.701682017035296</userOffsetX>
+                    <userOffsetY>17.0</userOffsetY>
+                    <basisDeltaX>ABSOLUTE</basisDeltaX>
+                    <deltaX>0.0</deltaX>
+                    <maxDeltaX>1.7976931348623157E308</maxDeltaX>
+                    <basisDeltaY>ABSOLUTE</basisDeltaY>
+                    <deltaY>0.0</deltaY>
+                    <maxDeltaY>1.7976931348623157E308</maxDeltaY>
+                    <corner>NORTH_WEST</corner>
+                    <relativeNodeId>vuelo1</relativeNodeId>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <linkValue>[vuelos : (realizadoPor:av1, vuelosAsignados:vuelo1)]</linkValue>
+    </edge>
+    <edge type="NodeEdge">
+        <source>av1</source>
+        <target>Vueling</target>
+        <name>Contrato</name>
+        <properties>
+            <edgeproperty id="Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>Contrato</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::0</related0>
+                        <related1>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>perteneceAerolinea</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>10.0</userOffsetX>
+                    <userOffsetY>-14.0</userOffsetY>
+                    <attached>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>tiene</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>*</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+        <connectionNode>
+            <edgeproperty id="Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::-1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="false">
+                <name>-1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>0.0</offsetY>
+                    <related length="2">
+                        <related0>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::0</related0>
+                        <related1>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <id>-1</id>
+                <specialid>7</specialid>
+                <hidden>true</hidden>
+            </edgeproperty>
+        </connectionNode>
+        <associationClass>
+            <node id="Contrato1" sizeCalculated="true" type="Object">
+                <name>Contrato1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToCorner">
+                    <userOffsetX>-30.0</userOffsetX>
+                    <userOffsetY>-56.0</userOffsetY>
+                    <basisDeltaX>ABSOLUTE</basisDeltaX>
+                    <deltaX>0.0</deltaX>
+                    <maxDeltaX>1.7976931348623157E308</maxDeltaX>
+                    <basisDeltaY>ABSOLUTE</basisDeltaY>
+                    <deltaY>-54.0</deltaY>
+                    <maxDeltaY>1.7976931348623157E308</maxDeltaY>
+                    <corner>NORTH</corner>
+                    <relativeNodeId>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]::WayPoint::-1</relativeNodeId>
+                </strategy>
+                <hidden>false</hidden>
+            </node>
+        </associationClass>
+        <linkValue>Contrato1 [Contrato : (perteneceAerolinea:Vueling, tiene:av1)]</linkValue>
+    </edge>
+</diagram_Layout>
