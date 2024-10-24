@@ -1,0 +1,101 @@
+model P2
+
+-----------clases-------------
+
+class Taller
+attributes
+fechaInicio : Integer
+fechaFin : Integer
+end
+
+class TallerOficial < Taller
+attributes
+garantiaDeTiempo : Integer
+end
+
+class TallerNoOficial < Taller
+end
+
+class Viaje
+attributes
+fechaSalida : Integer
+fechaLlegada : Integer
+numKmTotales : Integer derive : (self.formadoPor.numKm->sum())
+
+class Ciudad
+end
+
+class Coche
+attributes
+fechaMatriculacion : Integer
+garantía : Boolean 
+mantenimiento : Boolean --No deriva de garantia de tiempo.
+numKmRecorridos : Float derive : (self.viajes.numKmTotales->sum())
+
+
+class Recorrido
+attributes
+numKm : Integer
+end
+
+class Clock
+attributes
+NOW : Integer
+end
+
+----------relaciones-------------
+
+
+
+association revisionNoOficial between
+    Coche [1] role placeholder
+    TallerNoOficial [1] role placeholder
+end
+
+association revisionOficial between
+    Coche [1] role placeholder
+    TallerOficial [1] role placeholder
+end     
+
+association ubicacion between
+    TallerOficial [1] role placeholder
+    Ciudad [1] role placeholder
+end
+
+association ubicación between
+    TallerNoOficial [*] role placeholder
+    Ciudad [1] role placeholder
+end
+
+association estacionado between
+    Coche [*] role placeholder
+    Ciudad [0..1] role placeholder
+end
+
+association viaje between
+    Coche [*] role coches
+    Viaje [0..1] role viajes
+end
+
+association ruta between
+    Recorrido [1] role formadoPor
+    Viaje [*] role esParteDe
+end
+
+
+
+
+--------fin de relaciones-------------
+-----------clases de asociacin-------------
+
+associationclass Recorrido between
+  Ciudad [*] role destino
+  Ciudad [*] role salida
+attributes
+numKm : Integer = 5
+end
+
+
+
+
+    
