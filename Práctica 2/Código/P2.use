@@ -99,25 +99,26 @@ end
 
 
 -----------Invariantes---------
-
+constraints
 --4. Fecha inicio revision >= fecha de matriculación
 context Coche
     inv fechaRevisionMayorFechaMatriculacion : 
-        self.revisionCoche->forAll(r | r.fechaInicio >= self.fechaMatriculacion)
+        self.revisiones->forAll(r | r.fechaInicio >= self.fechaMatriculacion)
 
 --5. Solo una revision en cada momento
     inv revisionesNoSeSuperponen:
-        self.revisionCoche->forAll(r1, r2 |
+        self.revisiones->forAll(r1, r2 |
             r1 <> r2 implies (r1.fechaFin <= r2.fechaInicio or r2.fechaFin <= r1.fechaInicio)
         )
 
 --7. si coche esta en revision, la localización del coche debe ser la misma que la localización del taller que lo está revisando
     inv cocheUbicadoEnCiudadDelTallerDuranteRevision:
-        self.revisionCoche->exists(r |
+        self.revisiones->exists(r |
             r.fechaInicio <= Clock.allInstances()->any(true).NOW and
             r.fechaFin >= Clock.allInstances()->any(true).NOW and
-            self.ubicadoEn = r.tieneLugar.ocurre.estaEn
+            self.aparcado = r.ocurre.estaEn 
         )
+        --r.ocurre.tieneLugar.estaEn
 
 --8. Si el coche está viajando, tenemos fecha de salida pero no de llegada (null)
     inv fechaLlegadaNullSiCocheEnViaje:
@@ -129,8 +130,8 @@ context Coche
 --9. El coche está o viajando o en ciudad
     inv cocheViajandoOEnCiudad:
             (self.viajes->exists(v | v.fechaSalida <= Clock.allInstances()->any(true).NOW 
-                and v.fechaLlegada = null) implies self.ubicadoEn = null)
-            and (self.ubicadoEn <> null 
+                and v.fechaLlegada = null) implies self.aparcado = null)
+            and (self.aparcado <> null 
                 implies self.viajes->forAll(v | v.fechaLlegada <> null or v.fechaSalida > Clock.allInstances()->any(true).NOW))
 
 --10 y 12. Si el numero de viajes del coche es >= 1 y no está viajando, entonces debe estar en la última ciudad que llegó
@@ -138,7 +139,7 @@ context Coche
     inv cocheUbicadoEnUltimaCiudadSiNoViajando:
             (self.viajes->size() >= 1 and 
             self.viajes->forAll(v | v.fechaLlegada <> null)) implies 
-                self.ubicadoEn = self.viajes->sortedBy(v | v.fechaLlegada)->last().formadoPor.destino->any(true)
+                self.aparcado = self.viajes->sortedBy(v | v.fechaLlegada)->last().formadoPor.destino
 
 --11. La fecha de inicio de viaje2 debe ser >= que la fecha de fin del viaje1 siempre y cuand vel viaje1 ya haya acabado (viaje1.finViaje ! = null)
     inv viajesNoSolapados:
@@ -150,7 +151,7 @@ context Coche
     inv estaEnGarantia:
             self.garantia = 
                 (Clock.allInstances()->any(true).NOW - self.fechaMatriculacion <= 400 and
-                self.revisionCoche->exists(r | r.fechaFin <> null and
+                self.revisiones->exists(r | r.fechaFin <> null and
                 Clock.allInstances()->any(true).NOW - r.fechaFin <= TallerOficial.allInstances()->any(true).garantiaDeTiempo))
 
 --16. NO esta en Mantenimiento si (now - fechaMatriculacion <= 400) y SI necesita mantenimiento si (now - fechaFinTaller >= 100)
@@ -158,6 +159,6 @@ context Coche
             if Clock.allInstances()->any(true).NOW - self.fechaMatriculacion <= 400 then
                 self.mantenimiento = false
             else
-                self.mantenimiento = self.revisionCoche->exists(r | r.fechaFin <> null and
+                self.mantenimiento = self.revisiones->exists(r | r.fechaFin <> null and
                     Clock.allInstances()->any(true).NOW - r.fechaFin >= 100)
             endif
