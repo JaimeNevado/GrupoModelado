@@ -14,7 +14,8 @@ class Viaje
 attributes
 fechaSalida : Integer
 fechaLlegada : Integer 
-numKmTotales : Integer derive : (self.formadoPor.numKm -> sum())
+numKmTotales : Integer derive : (self.formadoPor.numKm)
+end
 
 class Ciudad
 end
@@ -25,18 +26,12 @@ fechaInicio : Integer
 fechaFin : Integer
 end
 
-class Coche
+class Coche < ActiveObject
 attributes
 fechaMatriculacion : Integer
-garantía : Boolean derive : (self.Clock.NOW - self.fechaMatriculacion <= 400) || (self.Clock.NOW - self.revisiones -> sortedBy(fechaFin).first().fechaFin <= sortedBy(fechaFin).first().ocurre.garantiaDeTiempo)
-mantenimiento : Boolean --No deriva de garantia de tiempo.
-numKmRecorridos : Float derive : (self.viajes.numKmTotales -> sum())
-
-
-class Recorrido
-attributes
-numKm : Integer
-    init : 5
+garantia : Boolean
+mantenimiento : Boolean
+numKmRecorridos : Real
 end
 
 class Clock
@@ -44,11 +39,18 @@ attributes
 NOW : Integer
 end
 
-
+abstract class ActiveObject
+    operations
+        tick()
+end
 
 
 ----------relaciones-------------
-    
+
+association Time between
+    Clock [1] role clock
+    ActiveObject [*] role ao ordered
+end    
 
 association Ubicacion between
     Taller [*] role talleres
@@ -61,17 +63,18 @@ association revisionTaller between
 end
 
 association estacionado between
-    Coche [*] role placeholder
-    Ciudad [0..1] role placeholder
+    Coche [*] role ubicadoEn
+    Ciudad [0..1] role aparcado
 end
 
 association revisionCoche between
     Revision [*] role revisiones
     Coche [1] role enRevision
+end
 
 association viaje between
     Coche [*] role coches
-    Viaje [0..1] role viajes
+    Viaje [*] role viajes
 end
 
 association ruta between
@@ -89,7 +92,8 @@ associationclass Recorrido between
   Ciudad [*] role destino
   Ciudad [*] role salida
 attributes
-numKm : Integer = 5
+numKm : Integer 
+    init = 5
 end
 
 
@@ -97,12 +101,9 @@ end
 -----------Invariantes---------
 
 -- 1. (este puede ser redundante) Distancia minima entre ciudades 5 km
-context viaje
-    inv distanciaMinima : self.numKmTotales >= 5
 
 
 --4. Fecha inicio revision >= fecha de matriculación
-context 
 
 --5. Solo una revision en cada momento
 
