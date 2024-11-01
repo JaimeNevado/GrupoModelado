@@ -100,6 +100,13 @@ end
 
 -----------Invariantes---------
 constraints
+
+context Ciudad
+
+inv alMenosUnTallerOficial:
+    self.talleres->select(t | t.oclIsTypeOf(TallerOficial))->size() > 0
+
+
 --4. Fecha inicio revision >= fecha de matriculación
 context Coche
     inv fechaRevisionMayorFechaMatriculacion : 
