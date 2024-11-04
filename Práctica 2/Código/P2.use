@@ -26,22 +26,30 @@ fechaInicio : Integer
 fechaFin : Integer
 end
 
+class Mantenimiento < Revision
+end
+
+class Averia < Revision
+end
+
 class Coche < ActiveObject
 attributes
 fechaMatriculacion : Integer
-garantia : Boolean
-mantenimiento : Boolean
-numKmRecorridos : Real
+garantia : Boolean derive : (self.clock.NOW - self.fechaMatriculacion <= 400 and self.revisiones->exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin    <= r.ocurre.oclAsType(TallerOficial).garantiaDeTiempo))
+mantenimiento : Boolean derive : (self.clock.NOW - self.fechaMatriculacion > 400 and self.revisiones->exists(r | r.oclIsTypeOf(Mantenimiento) and self.clock.NOW - r.fechaFin >= 100))
+numKmRecorridos : Real derive : (self.viajes.numKmTotales->sum())
 end
 
 class Clock
 attributes
 NOW : Integer
+operations
+    tick()
 end
 
 abstract class ActiveObject
     operations
-        tick()
+        action()
 end
 
 
@@ -83,8 +91,6 @@ association ruta between
 end
 
 
-
-
 --------fin de relaciones-------------
 -----------clases de asociacion-------------
 
@@ -103,8 +109,8 @@ constraints
 
 context Ciudad
 
-inv alMenosUnTallerOficial:
-    self.talleres->select(t | t.oclIsTypeOf(TallerOficial))->size() > 0
+inv aLoSumoUnTallerOficial:
+    self.talleres->select(t | t.oclIsTypeOf(TallerOficial))->size() <= 1
 
 
 --4. Fecha inicio revision >= fecha de matriculación
@@ -121,8 +127,8 @@ context Coche
 --7. si coche esta en revision, la localización del coche debe ser la misma que la localización del taller que lo está revisando
     inv cocheUbicadoEnCiudadDelTallerDuranteRevision:
         self.revisiones->exists(r |
-            r.fechaInicio <= Clock.allInstances()->any(true).NOW and
-            r.fechaFin >= Clock.allInstances()->any(true).NOW and
+            r.fechaInicio <= self.clock.NOW and
+            r.fechaFin >= self.clock.NOW and
             self.aparcado = r.ocurre.estaEn 
         )
         --r.ocurre.tieneLugar.estaEn
@@ -130,16 +136,17 @@ context Coche
 --8. Si el coche está viajando, tenemos fecha de salida pero no de llegada (null)
     inv fechaLlegadaNullSiCocheEnViaje:
         self.viajes->forAll(v |
-            (v.fechaSalida <= Clock.allInstances()->any(true).NOW and v.fechaLlegada = null) implies
+            (v.fechaSalida <= self.clock.NOW and v.fechaLlegada = null) implies
             self.viajes->exists(v | v.fechaLlegada = null)
         )
 
 --9. El coche está o viajando o en ciudad
     inv cocheViajandoOEnCiudad:
-            (self.viajes->exists(v | v.fechaSalida <= Clock.allInstances()->any(true).NOW 
+            (self.viajes->exists(v | v.fechaSalida <= self.clock.NOW 
                 and v.fechaLlegada = null) implies self.aparcado = null)
             and (self.aparcado <> null 
-                implies self.viajes->forAll(v | v.fechaLlegada <> null or v.fechaSalida > Clock.allInstances()->any(true).NOW))
+                implies self.viajes->forAll(v | v.fechaLlegada <> null or v.fechaSalida > self.clock.NOW
+))
 
 --10 y 12. Si el numero de viajes del coche es >= 1 y no está viajando, entonces debe estar en la última ciudad que llegó
 --NO ESTOY SEGURA PROBAR
@@ -155,17 +162,17 @@ context Coche
             )
 
 --15. Esta en Garantia si (now - fechaMatriculacion <= 400 días) y (now - fechaFinTaller <= garantíaTaller)
-    inv estaEnGarantia:
-            self.garantia = 
-                (Clock.allInstances()->any(true).NOW - self.fechaMatriculacion <= 400 and
-                self.revisiones->exists(r | r.fechaFin <> null and
-                Clock.allInstances()->any(true).NOW - r.fechaFin <= TallerOficial.allInstances()->any(true).garantiaDeTiempo))
+    -- inv estaEnGarantia:
+    --         self.garantia = 
+    --             (self.clock.NOW - self.fechaMatriculacion <= 400 and
+    --             self.revisiones->exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin 
+    --             <= r.ocurre.oclAsType(TallerOficial).garantiaDeTiempo))
 
 --16. NO esta en Mantenimiento si (now - fechaMatriculacion <= 400) y SI necesita mantenimiento si (now - fechaFinTaller >= 100)
-    inv estadoMantenimiento:
-            if Clock.allInstances()->any(true).NOW - self.fechaMatriculacion <= 400 then
-                self.mantenimiento = false
-            else
-                self.mantenimiento = self.revisiones->exists(r | r.fechaFin <> null and
-                    Clock.allInstances()->any(true).NOW - r.fechaFin >= 100)
-            endif
+    -- inv estadoMantenimiento:
+    --         self.mantenimiento = (self.clock.NOW - self.fechaMatriculacion > 400 and
+    --             self.revisiones->exists(r | self.clock.NOW - r.fechaFin >= 100))
+                --self.clock.NOW - self.revisiones->sortedBy(r| r.fechaFin)->last().fechaFin >= 100
+
+-- Fecha llegada == null ?? y revision == mantenimiento ??
+-- Km de coche son en horas o en dias???
