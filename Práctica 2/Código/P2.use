@@ -80,7 +80,7 @@ association RevisionCoche between
     Coche [1] role enRevision
 end
 
-association ViajeCoche between
+association Viaje between
     Coche [*] role coches
     Viaje [*] role viajes
 end
