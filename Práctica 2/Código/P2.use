@@ -107,6 +107,11 @@ end
 -----------Invariantes---------
 constraints
 
+context Revision
+
+inv cocheYTallerEstanEnLaMismaCiudad:
+    self.enRevision.aparcado->notEmpty() and (self.ocurre.estaEn = self.enRevision.aparcado)
+
 context Ciudad
 
 inv aLoSumoUnTallerOficial:
@@ -125,13 +130,12 @@ context Coche
         )
 
 --7. si coche esta en revision, la localización del coche debe ser la misma que la localización del taller que lo está revisando
-    inv cocheUbicadoEnCiudadDelTallerDuranteRevision:
-        self.revisiones->isEmpty() or self.revisiones->exists(r |
-            r.fechaInicio <= self.clock.NOW and
-            r.fechaFin >= self.clock.NOW and
-            self.aparcado = r.ocurre.estaEn 
-        )
-        --r.ocurre.tieneLugar.estaEn
+    -- inv cocheUbicadoEnCiudadDelTallerDuranteRevision:
+    --     self.revisiones->isEmpty() or self.revisiones->select(r |
+    --         r.fechaInicio <= self.clock.NOW and
+    --         r.fechaFin >= self.clock.NOW and
+    --         self.aparcado = r.ocurre.estaEn 
+    --     )
 
 --8. Si el coche está viajando, tenemos fecha de salida pero no de llegada (null)
     inv fechaLlegadaNullSiCocheEnViaje:
