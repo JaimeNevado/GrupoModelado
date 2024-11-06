@@ -10,35 +10,37 @@ reset
 !new TallerOficial('taller3')
 !taller3.garantiaDeTiempo := 60
 
+!new Taller('tallerNoOficial')
+
 !new Ciudad('Madrid')
 !new Ciudad('Malaga')
 !new Ciudad('Barcelona')
 
-!new Viaje('Malaga-Madrid')
-!Malaga-Madrid.fechaSalida := 1
-!Malaga-Madrid.fechaLlegada := 2
-!new Viaje('Madrid-Barcelona')
-!Madrid-Barcelona.fechaSalida := 7
-!Madrid-Barcelona.fechaLlegada := 8
+!new Viaje('Malaga_Madrid')
+!Malaga_Madrid.fechaSalida := 1
 
-!new Revision('rev1')
+!new Viaje('Madrid_Barcelona')
+!Madrid_Barcelona.fechaSalida := 7
+
+
+!new Mantenimiento('rev1')
 !rev1.fechaInicio := 425
-!rev.fechaFin := 430
+!rev1.fechaFin := 430
 
 !new Coche('Coche3')
-!Coche1.fechaMatriculacion := 340
-!Coche1.garantia := 250
-!Coche1.mantenimiento := 'true'
+!Coche3.fechaMatriculacion := 340
+!Coche3.garantia := true
+!Coche3.mantenimiento := false
 
 !new Coche('Coche2')
 !Coche2.fechaMatriculacion := 220
-!Coche2.garantia := 350
-!Coche2.mantenimiento := 'true'
+!Coche2.garantia := true
+!Coche2.mantenimiento := false
 
 !new Coche('Coche1')
-!Coche2.fechaMatriculacion := 1
-!Coche2.garantia := 50
-!Coche2.mantenimiento := 'true'
+!Coche1.fechaMatriculacion := 1
+!Coche1.garantia := true
+!Coche1.mantenimiento := false
 
 
 
@@ -50,17 +52,14 @@ reset
 !insert(taller2, Madrid) into Ubicacion
 !insert(taller3, Barcelona) into Ubicacion
 
-!insert(taller1,rev1) into revisionTaller
+!insert(taller1,rev1) into RevisionTaller
 
-!insert(Coche1,Malaga) into estacionado
+!insert(Coche1,Malaga) into Estacionado
 
-!insert(rev1,Coche1) into revisionCoche
+!insert(rev1,Coche1) into RevisionCoche
 
-!insert(Coche2, Malaga-Madrid) into Viaje
-!insert(Coche3, Madrid-Barcelona) into Viaje
-
-!insert(Recorrido1,Malaga-Madrid) into ruta --falta implementar recorrido en .use  
-!insert(Recorrido2, Madrid-Barcelona) into ruta
+!insert(Coche2, Malaga_Madrid) into Viaje
+!insert(Coche3, Madrid_Barcelona) into Viaje
 
 !insert(Malaga, Madrid) into Recorrido
 !Recorrido1.numKm := 527
