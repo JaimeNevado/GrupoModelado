@@ -1,0 +1,72 @@
+reset
+
+!new Clock('clock')
+!clock.NOW := 0
+
+!new TallerOficial('taller1')
+!taller1.garantiaDeTiempo := 50
+!new TallerOficial('taller2')
+!taller2.garantiaDeTiempo := 40
+!new TallerOficial('taller3')
+!taller3.garantiaDeTiempo := 60
+
+!new Ciudad('Madrid')
+!new Ciudad('Malaga')
+!new Ciudad('Barcelona')
+
+!new Viaje('Malaga-Madrid')
+!Malaga-Madrid.fechaSalida := 1
+!Malaga-Madrid.fechaLlegada := 2
+!new Viaje('Madrid-Barcelona')
+!Madrid-Barcelona.fechaSalida := 7
+!Madrid-Barcelona.fechaLlegada := 8
+
+!new Revision('rev1')
+!rev1.fechaInicio := 425
+!rev.fechaFin := 430
+
+!new Coche('Coche3')
+!Coche1.fechaMatriculacion := 340
+!Coche1.garantia := 250
+!Coche1.mantenimiento := 'true'
+
+!new Coche('Coche2')
+!Coche2.fechaMatriculacion := 220
+!Coche2.garantia := 350
+!Coche2.mantenimiento := 'true'
+
+!new Coche('Coche1')
+!Coche2.fechaMatriculacion := 1
+!Coche2.garantia := 50
+!Coche2.mantenimiento := 'true'
+
+
+
+
+!insert(clock, Coche1) into Time
+!insert(clock, Coche2) into Time
+
+!insert(taller1, Malaga) into Ubicacion
+!insert(taller2, Madrid) into Ubicacion
+!insert(taller3, Barcelona) into Ubicacion
+
+!insert(taller1,rev1) into revisionTaller
+
+!insert(Coche1,Malaga) into estacionado
+
+!insert(rev1,Coche1) into revisionCoche
+
+!insert(Coche2, Malaga-Madrid) into Viaje
+!insert(Coche3, Madrid-Barcelona) into Viaje
+
+!insert(Recorrido1,Malaga-Madrid) into ruta --falta implementar recorrido en .use  
+!insert(Recorrido2, Madrid-Barcelona) into ruta
+
+!insert(Malaga, Madrid) into Recorrido
+!Recorrido1.numKm := 527
+
+!insert(Madrid, Barcelona) into Recorrido
+!Recorrido2.numKm := 616
+
+
+
