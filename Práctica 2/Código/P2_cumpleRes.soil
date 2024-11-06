@@ -1,7 +1,7 @@
 reset
 
 !new Clock('clock')
-!clock.NOW := 0
+!clock.NOW := 426
 
 !new TallerOficial('taller1')
 !taller1.garantiaDeTiempo := 50
@@ -39,7 +39,7 @@ reset
 
 !new Coche('Coche1')
 !Coche1.fechaMatriculacion := 1
-!Coche1.garantia := true
+!Coche1.garantia := false
 !Coche1.mantenimiento := false
 
 
@@ -58,8 +58,8 @@ reset
 
 !insert(rev1,Coche1) into RevisionCoche
 
-!insert(Coche2, Malaga_Madrid) into Viaje
-!insert(Coche3, Madrid_Barcelona) into Viaje
+!insert(Coche2, Malaga_Madrid) into ViajeCoche
+!insert(Coche3, Madrid_Barcelona) into ViajeCoche
 
 !insert(Malaga, Madrid) into Recorrido
 !Recorrido1.numKm := 527
