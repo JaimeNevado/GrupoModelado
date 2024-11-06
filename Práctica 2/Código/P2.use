@@ -65,27 +65,27 @@ association Ubicacion between
     Ciudad [1] role estaEn
 end
 
-association revisionTaller between
+association RevisionTaller between
     Taller [1] role ocurre
     Revision [*] role tieneLugar
 end
 
-association estacionado between
+association Estacionado between
     Coche [*] role ubicadoEn
     Ciudad [0..1] role aparcado
 end
 
-association revisionCoche between
+association RevisionCoche between
     Revision [*] role revisiones
     Coche [1] role enRevision
 end
 
-association viaje between
+association Viaje between
     Coche [*] role coches
     Viaje [*] role viajes
 end
 
-association ruta between
+association Ruta between
     Recorrido [1] role formadoPor
     Viaje [*] role esParteDe
 end
