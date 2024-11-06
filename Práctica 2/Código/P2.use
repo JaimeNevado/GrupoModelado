@@ -126,7 +126,7 @@ context Coche
 
 --7. si coche esta en revision, la localización del coche debe ser la misma que la localización del taller que lo está revisando
     inv cocheUbicadoEnCiudadDelTallerDuranteRevision:
-        self.revisiones->exists(r |
+        self.revisiones->isEmpty() or self.revisiones->exists(r |
             r.fechaInicio <= self.clock.NOW and
             r.fechaFin >= self.clock.NOW and
             self.aparcado = r.ocurre.estaEn 
@@ -156,10 +156,12 @@ context Coche
                 self.aparcado = self.viajes->sortedBy(v | v.fechaLlegada)->last().formadoPor.destino
 
 --11. La fecha de inicio de viaje2 debe ser >= que la fecha de fin del viaje1 siempre y cuand vel viaje1 ya haya acabado (viaje1.finViaje ! = null)
-    inv viajesNoSolapados:
-            self.viajes->forAll(v1, v2 |
-                v1 <> v2 and v1.fechaLlegada <> null and v1.fechaLlegada <= v2.fechaSalida
-            )
+    --inv viajesNoSolapados:
+      --      self.viajes->forAll(v1, v2 |
+        --        v1 <> v2 and v1.fechaLlegada <> null and v1.fechaLlegada <= v2.fechaSalida
+          --  )
+
+-- ESTA RESTRICCION NO ES VALIDA PORQUE NO PUEDE HABER MAS DE UN VIAJE RELACIONADO CON UN COCHE
 
 --15. Esta en Garantia si (now - fechaMatriculacion <= 400 días) y (now - fechaFinTaller <= garantíaTaller)
     -- inv estaEnGarantia:
