@@ -39,7 +39,7 @@ attributes
 fechaMatriculacion : Integer
 garantia : Boolean derive : (self.clock.NOW - self.fechaMatriculacion <= 400 and self.revisiones -> exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin    <= r.ocurre.oclAsType(TallerOficial).garantiaDeTiempo))
 mantenimiento : Boolean derive : (self.clock.NOW - self.fechaMatriculacion > 400 and self.revisiones -> exists(r | r.oclIsTypeOf(Mantenimiento) and self.clock.NOW - r.fechaFin >= 100))
-numKmRecorridos : Real derive : (self.viajes.numKmTotales -> sum())
+numKmRecorridos : Real init = 0
 velocidad : Integer
 
 operations
@@ -50,26 +50,36 @@ operations
             viaje.fechaSalida := self.clock.NOW;
             viaje.numKmTotales := recorrido.numKm;
             insert(self, viaje) into ViajeCoche;
+            insert(recorrido, viaje) into Ruta;
             delete(self, self.aparcado) from Estacionado;
         end
         pre empiezaEnCiudad : (self.aparcado = recorrido.salida)
-        pre noEstaEnTaller : (self.revisiones -> sortedBy(fechaFin)->last().fechaFin < self.clock.NOW)
-        post llegaACiudad : (self.aparcado = recorrido.destino)
+        pre noEstaEnTaller : (self.revisiones->isEmpty() or self.revisiones -> sortedBy(fechaFin)->last().fechaFin < self.clock.NOW)
+        post noEstaEstacionadoEnCiudad : (self.aparcado = null)
 
+    finViaje()
+        begin
+        declare ultimoViaje : Viaje;
+            ultimoViaje := self.viajes -> select(v | v.fechaLlegada = null) -> any(true);
+            insert(self, ultimoViaje.formadoPor.destino) into Estacionado;
+            self.numKmRecorridos := self.numKmRecorridos + ultimoViaje.kmEnViaje;
+            ultimoViaje.fechaLlegada := self.clock.NOW;
+        end
 
     -- Avanzar()
     action()
         begin
         declare ultimoViaje : Viaje;
-        ultimoViaje := self.viajes -> select(v | v.fechaLlegada = null) -> any(true);        
+        if (self.viajes -> select(v | v.fechaLlegada = null) -> size() > 0) then
+            ultimoViaje := self.viajes -> select(v | v.fechaLlegada = null) -> any(true);        
             if (self.velocidad + ultimoViaje.kmEnViaje < ultimoViaje.numKmTotales) then
                 ultimoViaje.kmEnViaje := ultimoViaje.kmEnViaje + self.velocidad;
             else
                 ultimoViaje.kmEnViaje := ultimoViaje.kmEnViaje + (ultimoViaje.numKmTotales - ultimoViaje.kmEnViaje);
+                self.finViaje();
             end;
-
+        end;
         end
-        pre estaViajando : self.viajes -> select(v | v.fechaLlegada = null) -> size() > 0
         --post
 
 end  --Clase coche ends
@@ -137,8 +147,8 @@ end
 -----------clases de asociacion-------------
 
 associationclass Recorrido between
-  Ciudad [*] role destino
   Ciudad [*] role salida
+  Ciudad [*] role destino
 attributes
 numKm : Integer 
     init = 5

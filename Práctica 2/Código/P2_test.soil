@@ -1,0 +1,54 @@
+reset
+
+!new Clock('clock')
+!clock.NOW := 426
+
+!new TallerOficial('taller1')
+!taller1.garantiaDeTiempo := 50
+!new TallerOficial('taller2')
+!taller2.garantiaDeTiempo := 40
+!new TallerOficial('taller3')
+!taller3.garantiaDeTiempo := 60
+
+!new Taller('tallerNoOficial')
+
+!new Ciudad('Madrid')
+!new Ciudad('Malaga')
+!new Ciudad('Barcelona')
+
+!new Coche('Coche3')
+!Coche3.fechaMatriculacion := 340
+!Coche3.garantia := true
+!Coche3.mantenimiento := false
+
+!new Coche('Coche2')
+!Coche2.fechaMatriculacion := 220
+!Coche2.garantia := true
+!Coche2.mantenimiento := false
+
+!new Coche('Coche1')
+!Coche1.fechaMatriculacion := 1
+!Coche1.garantia := false
+!Coche1.mantenimiento := false
+!Coche1.velocidad := 100
+
+
+
+
+!insert(clock, Coche1) into Time
+!insert(clock, Coche2) into Time
+!insert(clock, Coche3) into Time
+
+!insert(taller1, Malaga) into Ubicacion
+!insert(taller2, Madrid) into Ubicacion
+!insert(taller3, Barcelona) into Ubicacion
+!insert(tallerNoOficial, Malaga) into Ubicacion
+
+!insert(Coche1,Malaga) into Estacionado
+
+!insert(Malaga, Madrid) into Recorrido
+!Recorrido1.numKm := 527
+
+!insert(Madrid, Barcelona) into Recorrido
+!Recorrido2.numKm := 616
+
