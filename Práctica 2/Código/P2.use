@@ -45,35 +45,32 @@ velocidad : Integer
 operations
     comienzaViaje(recorrido : Recorrido)
         begin
-            let viaje = Viaje {
-                fechaSalida := self.clock.NOW,
-                numKmTotales := recorrido.numKm
-            } in 
+            declare viaje : Viaje;
+            viaje := new Viaje();
+            viaje.fechaSalida := self.clock.NOW;
+            viaje.numKmTotales := recorrido.numKm;
             insert(self, viaje) into ViajeCoche;
             delete(self, self.aparcado) from Estacionado;
-
         end
         pre empiezaEnCiudad : (self.aparcado = recorrido.salida)
-        pre noEstaEnTaller : (self.revisiones -> sortedBy(fechaFin).last().fechaFin < self.clock.NOW)
+        pre noEstaEnTaller : (self.revisiones -> sortedBy(fechaFin)->last().fechaFin < self.clock.NOW)
         post llegaACiudad : (self.aparcado = recorrido.destino)
 
 
     -- Avanzar()
     action()
         begin
-        let ultimoViaje = Viaje {
-            self.viajes -> select(v | v.fechaFin = null) -> Any(true)
-        }   in            
-            if self.velocidad + ultimoViaje.kmEnViaje < ultimoViaje.numKmTotales then
-                ultimoViaje.kmEnViaje = ultimoViaje.kmEnViaje + self.velocidad;
-            end;
+        declare ultimoViaje : Viaje;
+        ultimoViaje := self.viajes -> select(v | v.fechaLlegada = null) -> any(true);        
+            if (self.velocidad + ultimoViaje.kmEnViaje < ultimoViaje.numKmTotales) then
+                ultimoViaje.kmEnViaje := ultimoViaje.kmEnViaje + self.velocidad;
             else
-                ultimoViaje.kmEnViaje = ultimoViaje.kmEnViaje + (ultimoViaje.numKmTotales - ultimoViaje.kmEnViaje)
+                ultimoViaje.kmEnViaje := ultimoViaje.kmEnViaje + (ultimoViaje.numKmTotales - ultimoViaje.kmEnViaje);
             end;
 
         end
-        pre estaViajando : self.viajes -> select(v | v.fechaFin = null) -> size() > 0
-        post
+        pre estaViajando : self.viajes -> select(v | v.fechaLlegada = null) -> size() > 0
+        --post
 
 end  --Clase coche ends
 
