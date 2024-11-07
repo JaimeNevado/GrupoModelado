@@ -47,10 +47,12 @@ reset
 
 !insert(clock, Coche1) into Time
 !insert(clock, Coche2) into Time
+!insert(clock, Coche3) into Time
 
 !insert(taller1, Malaga) into Ubicacion
 !insert(taller2, Madrid) into Ubicacion
 !insert(taller3, Barcelona) into Ubicacion
+!insert(tallerNoOficial, Malaga) into Ubicacion
 
 !insert(taller1,rev1) into RevisionTaller
 
@@ -67,5 +69,7 @@ reset
 !insert(Madrid, Barcelona) into Recorrido
 !Recorrido2.numKm := 616
 
+!insert(Recorrido1, Malaga_Madrid) into Ruta
+!insert(Recorrido2, Madrid_Barcelona) into Ruta
 
 
