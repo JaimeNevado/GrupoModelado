@@ -191,17 +191,15 @@ context Coche
 
 --8. Si el coche está viajando, tenemos fecha de salida pero no de llegada (null)
     inv fechaLlegadaNullSiCocheEnViaje:
-        self.viajes -> forAll(v |
-            (v.fechaSalida <= self.clock.NOW and v.fechaLlegada = null) implies
-            self.viajes -> exists(v | v.fechaLlegada = null)
-        )
+        self.aparcado = null implies
+            self.viajes -> exists(v | v.fechaSalida <> null and v.fechaLlegada = null)
 
 --9. El coche está o viajando o en ciudad
     inv cocheViajandoOEnCiudad:
             (self.viajes -> exists(v | v.fechaSalida <= self.clock.NOW 
-                and v.fechaLlegada = null) implies self.aparcado = null)
-            and (self.aparcado <> null 
-                implies self.viajes -> forAll(v | v.fechaLlegada <> null or v.fechaSalida > self.clock.NOW
+                and v.fechaLlegada = null) and self.aparcado = null)
+            or (not(self.viajes -> exists(v | v.fechaSalida <= self.clock.NOW 
+                and v.fechaLlegada = null)) and self.aparcado <> null)
 ))
 
 --10 y 12. Si el numero de viajes del coche es >= 1 y no está viajando, entonces debe estar en la última ciudad que llegó
