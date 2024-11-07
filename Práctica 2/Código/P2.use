@@ -15,6 +15,8 @@ attributes
 fechaSalida : Integer
 fechaLlegada : Integer 
 numKmTotales : Integer derive : (self.formadoPor.numKm)
+kmEnViaje : Integer
+    init = 0
 end
 
 class Ciudad
@@ -35,21 +37,64 @@ end
 class Coche < ActiveObject
 attributes
 fechaMatriculacion : Integer
-garantia : Boolean derive : (self.clock.NOW - self.fechaMatriculacion <= 400 and self.revisiones->exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin    <= r.ocurre.oclAsType(TallerOficial).garantiaDeTiempo))
-mantenimiento : Boolean derive : (self.clock.NOW - self.fechaMatriculacion > 400 and self.revisiones->exists(r | r.oclIsTypeOf(Mantenimiento) and self.clock.NOW - r.fechaFin >= 100))
-numKmRecorridos : Real derive : (self.viajes.numKmTotales->sum())
-end
+garantia : Boolean derive : (self.clock.NOW - self.fechaMatriculacion <= 400 and self.revisiones -> exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin    <= r.ocurre.oclAsType(TallerOficial).garantiaDeTiempo))
+mantenimiento : Boolean derive : (self.clock.NOW - self.fechaMatriculacion > 400 and self.revisiones -> exists(r | r.oclIsTypeOf(Mantenimiento) and self.clock.NOW - r.fechaFin >= 100))
+numKmRecorridos : Real derive : (self.viajes.numKmTotales -> sum())
+velocidad : Integer
+
+operations
+    comienzaViaje(recorrido : Recorrido)
+        begin
+            let viaje = Viaje {
+                fechaSalida := self.clock.NOW,
+                numKmTotales := recorrido.numKm
+            } in 
+            insert(self, viaje) into ViajeCoche;
+            delete(self, self.aparcado) from Estacionado;
+
+        end
+        pre empiezaEnCiudad : (self.aparcado = recorrido.salida)
+        pre noEstaEnTaller : (self.revisiones -> sortedBy(fechaFin).last().fechaFin < self.clock.NOW)
+        post llegaACiudad : (self.aparcado = recorrido.destino)
+
+
+    -- Avanzar()
+    action()
+        begin
+        let ultimoViaje = Viaje {
+            self.viajes -> select(v | v.fechaFin = null) -> Any(true)
+        }   in            
+            if self.velocidad + ultimoViaje.kmEnViaje < ultimoViaje.numKmTotales then
+                ultimoViaje.kmEnViaje = ultimoViaje.kmEnViaje + self.velocidad;
+            end;
+            else
+                ultimoViaje.kmEnViaje = ultimoViaje.kmEnViaje + (ultimoViaje.numKmTotales - ultimoViaje.kmEnViaje)
+            end;
+
+        end
+        pre estaViajando : self.viajes -> select(v | v.fechaFin = null) -> size() > 0
+        post
+
+end  --Clase coche ends
 
 class Clock
 attributes
 NOW : Integer
 operations
     tick()
+        begin
+            self.NOW := self.NOW + 1;
+            for o in self.ao do
+                o.action();
+            end;
+        end
 end
 
 abstract class ActiveObject
     operations
         action()
+            begin 
+            end
 end
 
 
@@ -110,28 +155,28 @@ constraints
 context Revision
 
 inv cocheYTallerEstanEnLaMismaCiudad:
-    self.enRevision.aparcado->notEmpty() and (self.ocurre.estaEn = self.enRevision.aparcado)
+    self.enRevision.aparcado -> notEmpty() and (self.ocurre.estaEn = self.enRevision.aparcado)
 
 context Ciudad
 
 inv aLoSumoUnTallerOficial:
-    self.talleres->select(t | t.oclIsTypeOf(TallerOficial))->size() <= 1
+    self.talleres -> select(t | t.oclIsTypeOf(TallerOficial)) -> size() <= 1
 
 
 --4. Fecha inicio revision >= fecha de matriculación
 context Coche
     inv fechaRevisionMayorFechaMatriculacion : 
-        self.revisiones->forAll(r | r.fechaInicio >= self.fechaMatriculacion)
+        self.revisiones -> forAll(r | r.fechaInicio >= self.fechaMatriculacion)
 
 --5. Solo una revision en cada momento
     inv revisionesNoSeSuperponen:
-        self.revisiones->forAll(r1, r2 |
+        self.revisiones -> forAll(r1, r2 |
             r1 <> r2 implies (r1.fechaFin <= r2.fechaInicio or r2.fechaFin <= r1.fechaInicio)
         )
 
 --7. si coche esta en revision, la localización del coche debe ser la misma que la localización del taller que lo está revisando
     -- inv cocheUbicadoEnCiudadDelTallerDuranteRevision:
-    --     self.revisiones->isEmpty() or self.revisiones->select(r |
+    --     self.revisiones -> isEmpty() or self.revisiones -> select(r |
     --         r.fechaInicio <= self.clock.NOW and
     --         r.fechaFin >= self.clock.NOW and
     --         self.aparcado = r.ocurre.estaEn 
@@ -139,29 +184,29 @@ context Coche
 
 --8. Si el coche está viajando, tenemos fecha de salida pero no de llegada (null)
     inv fechaLlegadaNullSiCocheEnViaje:
-        self.viajes->forAll(v |
+        self.viajes -> forAll(v |
             (v.fechaSalida <= self.clock.NOW and v.fechaLlegada = null) implies
-            self.viajes->exists(v | v.fechaLlegada = null)
+            self.viajes -> exists(v | v.fechaLlegada = null)
         )
 
 --9. El coche está o viajando o en ciudad
     inv cocheViajandoOEnCiudad:
-            (self.viajes->exists(v | v.fechaSalida <= self.clock.NOW 
+            (self.viajes -> exists(v | v.fechaSalida <= self.clock.NOW 
                 and v.fechaLlegada = null) implies self.aparcado = null)
             and (self.aparcado <> null 
-                implies self.viajes->forAll(v | v.fechaLlegada <> null or v.fechaSalida > self.clock.NOW
+                implies self.viajes -> forAll(v | v.fechaLlegada <> null or v.fechaSalida > self.clock.NOW
 ))
 
 --10 y 12. Si el numero de viajes del coche es >= 1 y no está viajando, entonces debe estar en la última ciudad que llegó
 --NO ESTOY SEGURA PROBAR
     inv cocheUbicadoEnUltimaCiudadSiNoViajando:
-            (self.viajes->size() >= 1 and 
-            self.viajes->forAll(v | v.fechaLlegada <> null)) implies 
-                self.aparcado = self.viajes->sortedBy(v | v.fechaLlegada)->last().formadoPor.destino
+            (self.viajes -> size() >= 1 and 
+            self.viajes -> forAll(v | v.fechaLlegada <> null)) implies 
+                self.aparcado = self.viajes -> sortedBy(v | v.fechaLlegada) -> last().formadoPor.destino
 
 --11. La fecha de inicio de viaje2 debe ser >= que la fecha de fin del viaje1 siempre y cuand vel viaje1 ya haya acabado (viaje1.finViaje ! = null)
     --inv viajesNoSolapados:
-      --      self.viajes->forAll(v1, v2 |
+      --      self.viajes -> forAll(v1, v2 |
         --        v1 <> v2 and v1.fechaLlegada <> null and v1.fechaLlegada <= v2.fechaSalida
           --  )
 
@@ -171,14 +216,14 @@ context Coche
     -- inv estaEnGarantia:
     --         self.garantia = 
     --             (self.clock.NOW - self.fechaMatriculacion <= 400 and
-    --             self.revisiones->exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin 
+    --             self.revisiones -> exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin 
     --             <= r.ocurre.oclAsType(TallerOficial).garantiaDeTiempo))
 
 --16. NO esta en Mantenimiento si (now - fechaMatriculacion <= 400) y SI necesita mantenimiento si (now - fechaFinTaller >= 100)
     -- inv estadoMantenimiento:
     --         self.mantenimiento = (self.clock.NOW - self.fechaMatriculacion > 400 and
-    --             self.revisiones->exists(r | self.clock.NOW - r.fechaFin >= 100))
-                --self.clock.NOW - self.revisiones->sortedBy(r| r.fechaFin)->last().fechaFin >= 100
+    --             self.revisiones -> exists(r | self.clock.NOW - r.fechaFin >= 100))
+                --self.clock.NOW - self.revisiones -> sortedBy(r| r.fechaFin) -> last().fechaFin >= 100
 
--- Fecha llegada == null ?? y revision == mantenimiento ??
+-- Fecha llegada = = null ?? y revision = = mantenimiento ??
 -- Km de coche son en horas o en dias???
