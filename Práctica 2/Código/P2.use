@@ -39,7 +39,7 @@ attributes
 fechaMatriculacion : Integer
 garantia : Boolean derive : (self.clock.NOW - self.fechaMatriculacion <= 400 or self.revisiones -> exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin    <= r.ocurre.oclAsType(TallerOficial).garantiaDeTiempo))
 mantenimiento : Boolean derive : (self.clock.NOW - self.fechaMatriculacion > 400 and self.revisiones -> exists(r | r.oclIsTypeOf(Mantenimiento) and self.clock.NOW - r.fechaFin >= 100))
-numKmRecorridos : Real init = 0
+numKmRecorridos : Integer init = 0
 velocidad : Integer
 
 operations
