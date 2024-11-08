@@ -121,9 +121,9 @@ association Time between
     ActiveObject [*] role ao ordered
 end    
 
-association Ubicacion between
-    Taller [*] role talleres
+composition Ubicacion between
     Ciudad [1] role estaEn
+    Taller [*] role talleres
 end
 
 association RevisionTaller between
