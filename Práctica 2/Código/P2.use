@@ -173,6 +173,12 @@ context Revision
 inv cocheYTallerEstanEnLaMismaCiudad:
     self.enRevision.aparcado -> notEmpty() and (self.ocurre.estaEn = self.enRevision.aparcado)
 
+inv fechasNoNulas:
+    self.fechaInicio <> null and fechaFin <> null
+
+inv fechaInicioTieneQueSerMenorOIgualQueFechaFin:
+    self.fechaInicio <= self.fechaFin
+
 context Ciudad
 
 inv aLoSumoUnTallerOficial:

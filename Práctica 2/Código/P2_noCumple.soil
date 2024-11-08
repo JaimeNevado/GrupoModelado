@@ -1,0 +1,77 @@
+reset
+
+!new Clock('clock')
+!clock.NOW := 426
+
+!new TallerOficial('taller1')
+!taller1.garantiaDeTiempo := 50
+!new TallerOficial('taller2')
+!taller2.garantiaDeTiempo := 40
+!new TallerOficial('taller3')
+!taller3.garantiaDeTiempo := 60
+
+!new Taller('tallerNoOficial')
+
+!new Ciudad('Madrid')
+!new Ciudad('Malaga')
+!new Ciudad('Barcelona')
+
+!new Viaje('Malaga_Madrid')
+!Malaga_Madrid.fechaSalida := 1
+
+!new Viaje('Madrid_Barcelona')
+!Madrid_Barcelona.fechaSalida := 7
+
+!new Mantenimiento('rev1')
+!rev1.fechaInicio := 425
+!rev1.fechaFin := 430
+
+!new Mantenimiento('revMala') -- Empieza más tarde que la fecha fin
+!rev1.fechaInicio := 123
+!rev1.fechaFin := 32
+
+!new Coche('Coche3')
+!Coche3.fechaMatriculacion := 340
+!Coche3.garantia := true
+!Coche3.mantenimiento := false
+
+!new Coche('Coche2')
+!Coche2.fechaMatriculacion := 220
+!Coche2.garantia := true
+!Coche2.mantenimiento := false
+
+!new Coche('Coche1')
+!Coche1.fechaMatriculacion := 1
+!Coche1.garantia := false
+!Coche1.mantenimiento := false
+
+!insert(clock, Coche1) into Time
+!insert(clock, Coche2) into Time
+!insert(clock, Coche3) into Time
+
+!insert(taller1, Malaga) into Ubicacion
+!insert(taller2, Malaga) into Ubicacion --Dos talleres en la misma ciudad
+!insert(taller3, Barcelona) into Ubicacion
+!insert(tallerNoOficial, Malaga) into Ubicacion
+
+!insert(Coche3,Barcelona) into Estacionado 
+!insert(taller3,revMala) into RevisionTaller -- Salta la invariante del que la revisión empieza más tarde de que acaba
+
+!insert(taller1,rev1) into RevisionTaller
+!insert(Coche1,Madrid) into Estacionado --Coche en Bilbao
+
+!insert(rev1,Coche1) into RevisionCoche  -- Revisión en taller de Málaga (taller1) y coche está en bilbao
+
+!insert(Coche2, Malaga_Madrid) into ViajeCoche
+!insert(Coche3, Madrid_Barcelona) into ViajeCoche
+
+!insert(Malaga, Madrid) into Recorrido -- Distancia menor a 5km
+!Recorrido1.numKm := 4
+
+!insert(Madrid, Barcelona) into Recorrido -- Distancia menor a 5km
+!Recorrido2.numKm := 1
+
+!insert(Recorrido1, Malaga_Madrid) into Ruta
+!insert(Recorrido2, Madrid_Barcelona) into Ruta
+
+
