@@ -37,7 +37,7 @@ end
 class Coche < ActiveObject
 attributes
 fechaMatriculacion : Integer
-garantia : Boolean derive : (self.clock.NOW - self.fechaMatriculacion <= 400 and self.revisiones -> exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin    <= r.ocurre.oclAsType(TallerOficial).garantiaDeTiempo))
+garantia : Boolean derive : (self.clock.NOW - self.fechaMatriculacion <= 400 or self.revisiones -> exists(r | r.ocurre.oclIsTypeOf(TallerOficial) and self.clock.NOW  - r.fechaFin    <= r.ocurre.oclAsType(TallerOficial).garantiaDeTiempo))
 mantenimiento : Boolean derive : (self.clock.NOW - self.fechaMatriculacion > 400 and self.revisiones -> exists(r | r.oclIsTypeOf(Mantenimiento) and self.clock.NOW - r.fechaFin >= 100))
 numKmRecorridos : Real init = 0
 velocidad : Integer
@@ -200,7 +200,6 @@ context Coche
                 and v.fechaLlegada = null) and self.aparcado = null)
             or (not(self.viajes -> exists(v | v.fechaSalida <= self.clock.NOW 
                 and v.fechaLlegada = null)) and self.aparcado <> null)
-))
 
 --10 y 12. Si el numero de viajes del coche es >= 1 y no está viajando, entonces debe estar en la última ciudad que llegó
 --NO ESTOY SEGURA PROBAR
