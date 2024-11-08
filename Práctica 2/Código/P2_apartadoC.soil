@@ -1,0 +1,21 @@
+reset
+
+!new Clock('clock')
+!clock.NOW := 0
+
+!new Ciudad('Malaga')
+!new Ciudad('Sevilla')
+!new Ciudad('Granada')
+
+!new Coche('Coche1')
+!Coche1.fechaMatriculacion := 0
+!Coche1.velocidad := 27
+
+!insert(clock, Coche1) into Time
+
+!insert(Coche1,Malaga) into Estacionado
+
+!insert(Malaga, Sevilla) into Recorrido
+!Recorrido1.numKm := 210
+!insert(Sevilla, Granada) into Recorrido
+!Recorrido2.numKm := 250
