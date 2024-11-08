@@ -57,27 +57,36 @@ operations
         pre noEstaEnTaller : (self.revisiones->isEmpty() or self.revisiones -> sortedBy(fechaFin)->last().fechaFin < self.clock.NOW)
         post noEstaEstacionadoEnCiudad : (self.aparcado = null)
 
-    finViaje()
+    finViaje(ultimoViaje : Viaje)
         begin
-        declare ultimoViaje : Viaje;
-            ultimoViaje := self.viajes -> select(v | v.fechaLlegada = null) -> any(true);
             insert(self, ultimoViaje.formadoPor.destino) into Estacionado;
             self.numKmRecorridos := self.numKmRecorridos + ultimoViaje.kmEnViaje;
             ultimoViaje.fechaLlegada := self.clock.NOW;
         end
+        pre ViajeEnCurso : (ultimoViaje <> null)
+        post AparcadoEnCiudadDestino : (self.aparcado = ultimoViaje.formadoPor.destino)
+        post SeSumenKmRecorridosAlCoche : (self.numKmRecorridos = self.numKmRecorridos@pre + ultimoViaje.numKmTotales)
+        post FechaLlegadaActualizada : (ultimoViaje.fechaLlegada@pre <> ultimoViaje.fechaLlegada and ultimoViaje.fechaLlegada = self.clock.NOW)
+    
+    avanzar(ultimoViaje : Viaje)
+        begin
+            if (self.velocidad + ultimoViaje.kmEnViaje < ultimoViaje.numKmTotales) then
+                ultimoViaje.kmEnViaje := ultimoViaje.kmEnViaje + self.velocidad;
+            else
+                ultimoViaje.kmEnViaje := ultimoViaje.kmEnViaje + (ultimoViaje.numKmTotales - ultimoViaje.kmEnViaje);
+                self.finViaje(ultimoViaje);
+            end;
+        end
+        pre ViajeEnCurso : (ultimoViaje <> null)
+        post SeSumenLosKmCorrespondientesAEseDia : (ultimoViaje.kmEnViaje = ultimoViaje.kmEnViaje@pre + self.velocidad or ultimoViaje.kmEnViaje = ultimoViaje.numKmTotales)
 
     -- Avanzar()
     action()
         begin
         declare ultimoViaje : Viaje;
-        if (self.viajes -> select(v | v.fechaLlegada = null) -> size() > 0) then
+        if (self.viajes -> select(v | v.fechaLlegada = null) -> size() > 0) then -- Si hay un viaje en curso avanza
             ultimoViaje := self.viajes -> select(v | v.fechaLlegada = null) -> any(true);        
-            if (self.velocidad + ultimoViaje.kmEnViaje < ultimoViaje.numKmTotales) then
-                ultimoViaje.kmEnViaje := ultimoViaje.kmEnViaje + self.velocidad;
-            else
-                ultimoViaje.kmEnViaje := ultimoViaje.kmEnViaje + (ultimoViaje.numKmTotales - ultimoViaje.kmEnViaje);
-                self.finViaje();
-            end;
+            self.avanzar(ultimoViaje);
         end;
         end
         --post
