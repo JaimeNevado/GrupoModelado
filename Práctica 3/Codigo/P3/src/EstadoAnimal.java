@@ -1,2 +1,3 @@
-public class EstadoAnimal {
+public enum EstadoAnimal {
+    disponible, adoptado, enTratamiento
 }
