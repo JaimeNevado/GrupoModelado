@@ -1,2 +1,2 @@
-public class Voluntario {
+public interface Voluntario {
 }

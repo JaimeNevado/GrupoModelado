@@ -1,2 +1,2 @@
-public class Adoptante {
+public interface Adoptante {
 }

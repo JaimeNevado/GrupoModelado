@@ -1,2 +1,2 @@
-public class Donante {
+public interface Donante {
 }
