@@ -1,20 +1,21 @@
 import java.util.Date;
 
 public class Animal {
-    private Date fechaNacimiento;
+    private Date nacimiento;
     private EstadoAnimal estado;
+    private Adopcion adopcion;
 
     public Animal(Date nacimiento, EstadoAnimal estado) {
-        this.fechaNacimiento = nacimiento;
-        this.estado = estado;
+        this.setNacimiento(nacimiento);
+        this.setEstado(estado);
+    }
+    
+    public Date getNacimiento() {
+        return nacimiento;
     }
 
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setNacimiento(Date nacimiento) {
+        this.nacimiento = nacimiento;
     }
 
     public EstadoAnimal getEstado() {
@@ -23,5 +24,13 @@ public class Animal {
 
     public void setEstado(EstadoAnimal estado) {
         this.estado = estado;
+    }
+
+    public void setAdopcion(Adopcion adopcion) {
+        this.adopcion = adopcion;
+    }
+
+    public Adopcion getAdopcion() {
+        return adopcion;
     }
 }
