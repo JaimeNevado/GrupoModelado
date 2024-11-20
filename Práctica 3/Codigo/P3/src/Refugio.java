@@ -16,6 +16,7 @@ public class Refugio {
 	 */
     public void registrar(Animal a) {
         this.animalesRegistrados.add(a);
+        a.setEstado(EstadoAnimal.disponible);
     }
     
     public Float getLiquidez() {
