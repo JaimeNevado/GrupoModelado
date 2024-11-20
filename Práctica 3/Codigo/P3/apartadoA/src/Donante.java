@@ -8,10 +8,7 @@ public class Donante extends Socio {
         super(registro, refugio);
         donaciones = new ArrayList<>();
     }
-    /**
-	 * 
-	 * @param c
-	 */
+    
     public void donar(Float c) {
         Donacion d = new Donacion(c, new Date());
         donaciones.add(d);
