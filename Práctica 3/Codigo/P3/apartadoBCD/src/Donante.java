@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Donante extends Socio {
+public class Donante extends Rol {
     ArrayList<Donacion> donaciones;
 
     public Donante(Date registro, Refugio refugio) {
@@ -17,5 +17,15 @@ public class Donante extends Socio {
         donaciones.add(d);
         Refugio refugio = this.getRefugio();
         refugio.setLiquidez(refugio.getLiquidez() + d.getCantidad());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null && this.getClass() == obj.getClass();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.getClass());
     }
 }

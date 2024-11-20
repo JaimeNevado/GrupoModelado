@@ -1,13 +1,9 @@
 import java.util.Date;
 import java.util.ArrayList;
 
-public class Voluntario extends Socio {
+public class Voluntario extends Rol {
     private ArrayList<Adopcion> adopciones;
-	/**
-	 * 
-	 * @param a
-	 * @param ad
-	 */
+	
     public Voluntario(Date registro,Refugio refugio) {
         super(registro,refugio);
         this.adopciones = new ArrayList<Adopcion>();
@@ -19,8 +15,6 @@ public class Voluntario extends Socio {
         a.setEstado(EstadoAnimal.adoptado);
 
         Refugio refugio = this.getRefugio();
-        //no se si hace falta un if else o solo un
-        //refugio.getAnimalesRefugiados().remove(a)
         
         if (refugio.getAnimalesRefugiados().remove(a)) {
             System.out.println("El animal " + a.getNombre() + " ha sido adoptado y eliminado del refugio.");
@@ -29,13 +23,17 @@ public class Voluntario extends Socio {
         }
     }
 
-	/**
-	 * 
-	 * @param a
-	 * @param r
-	 */
-
     public void registrar(Animal a, Refugio r) {
         r.registrar(a);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null && this.getClass() == obj.getClass();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.getClass());
     }
 }
