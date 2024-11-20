@@ -21,6 +21,7 @@ public class Voluntario extends Socio {
         Refugio refugio = this.getRefugio();
         //no se si hace falta un if else o solo un
         //refugio.getAnimalesRefugiados().remove(a)
+        
         if (refugio.getAnimalesRefugiados().remove(a)) {
             System.out.println("El animal " + a.getNombre() + " ha sido adoptado y eliminado del refugio.");
         } else {
