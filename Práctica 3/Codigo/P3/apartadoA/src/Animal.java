@@ -9,7 +9,7 @@ public class Animal {
         this.setNacimiento(nacimiento);
         this.setEstado(estado);
     }
-    
+
     public Date getNacimiento() {
         return nacimiento;
     }
