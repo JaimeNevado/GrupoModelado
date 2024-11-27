@@ -15,7 +15,33 @@ public class Socio {
             roles.add(rol);
         }
     }
-    
+
+    public Donante getRolDonante() {
+        for (Rol rol : roles) {
+            if (rol instanceof Donante) {
+                return (Donante) rol;
+            }
+        }
+        return null;
+    }
+
+    public Adoptante getRolAdoptante() {
+        for (Rol rol : roles) {
+            if (rol instanceof Adoptante) {
+                return (Adoptante) rol;
+            }
+        }
+        return null;
+    }
+
+    public Voluntario getRolVoluntario() {
+        for (Rol rol : roles) {
+            if (rol instanceof Voluntario) {
+                return (Voluntario) rol;
+            }
+        }
+        return null;
+    }
 
     public List<Rol> getRoles() {
         return roles;
@@ -37,13 +63,4 @@ public class Socio {
         this.refugio = refugio;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return obj != null && this.getClass() == obj.getClass();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(this.getClass());
-    }
 }

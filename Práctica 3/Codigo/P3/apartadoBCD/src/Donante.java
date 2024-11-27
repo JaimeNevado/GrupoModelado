@@ -3,9 +3,11 @@ import java.util.Date;
 
 public class Donante extends Rol {
     ArrayList<Donacion> donaciones;
+    protected Socio socio;
 
     public Donante(Date registro, Refugio refugio) {
-        super(registro, refugio);
+        socio = new Socio(registro, refugio);
+        socio.agregarRol(this);
         donaciones = new ArrayList<>();
     }
     /**
@@ -15,17 +17,8 @@ public class Donante extends Rol {
     public void donar(Float c) {
         Donacion d = new Donacion(c, new Date());
         donaciones.add(d);
-        Refugio refugio = this.getRefugio();
+        Refugio refugio = socio.getRefugio();
         refugio.setLiquidez(refugio.getLiquidez() + d.getCantidad());
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return obj != null && this.getClass() == obj.getClass();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(this.getClass());
-    }
 }

@@ -7,8 +7,8 @@ public class Refugio {
 
     public Refugio(Float liquidez) {
         this.liquidez = liquidez;
-        this.animalesRefugiados = new ArrayList<Animal>();
-        this.animalesRegistrados = new ArrayList<Animal>();
+        this.animalesRefugiados = new ArrayList<>();
+        this.animalesRegistrados = new ArrayList<>();
     }
 	/**
 	 * 
@@ -24,7 +24,7 @@ public class Refugio {
         return liquidez;
     }
     
-    public void setLiquidez(Float liquidez) {
+    protected void setLiquidez(Float liquidez) {
         this.liquidez = liquidez;
     }
     
