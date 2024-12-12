@@ -1,3 +1,32 @@
-public class WebRental extends Rental{
-    private int deliveryTime;
+import java.util.Date;
+
+public class WebRental extends Rental {
+    private Integer deliveryTime; // Puede ser null si no está establecido
+    private RentalOffice deliveryOffice;
+
+    public WebRental(Date startDate, Date endDate, Customer customer, Car car, RentalOffice pickUpOffice, RentalOffice deliveryOffice) {
+        super(startDate, endDate, customer, car, pickUpOffice);
+        this.deliveryTime = null; // Inicialmente null
+        this.deliveryOffice = deliveryOffice;
+    }
+
+    // Método para establecer el tiempo de entrega
+    public void setDeliveryTime(Integer deliveryTime) {
+        this.deliveryTime = deliveryTime;
+    }
+
+    // Método para borrar el tiempo de entrega
+    public void clearDeliveryTime() {
+        this.deliveryTime = null;
+    }
+
+    // Método para obtener el tiempo de entrega
+    public Integer getDeliveryTime() {
+        return deliveryTime;
+    }
+
+    // Método para verificar si el tiempo de entrega está definido
+    public boolean hasDeliveryTime() {
+        return deliveryTime != null;
+    }
 }
