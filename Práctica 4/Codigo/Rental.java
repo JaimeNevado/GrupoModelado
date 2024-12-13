@@ -1,18 +1,16 @@
 import java.util.*;
 
-public class Rental {
+public abstract class Rental {
     private Date startDate;
     private Date endDate;
     private Customer customer;
     private Car car;
-    private RentalOffice pickUpOffice;
 
-    public Rental(Date startDate, Date endDate, Customer customer, Car car, RentalOffice pickUpOffice) {
+    public Rental(Date startDate, Date endDate, Customer customer, Car car) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.customer = customer;
         this.car = car;
-        this.pickUpOffice = pickUpOffice;
     }
 
     public Date getStartDate() {
@@ -47,21 +45,4 @@ public class Rental {
         this.car = car;
     }
 
-    public RentalOffice getPickUpOffice() {
-        return pickUpOffice;
-    }
-
-    public void setPickUpOffice(RentalOffice pickUpOffice) {
-        this.pickUpOffice = pickUpOffice;
-    }
-
-//    public String getPickUpOffice() {
-//        String office = "";
-//        return office;
-//    }
-//
-//    public String getDropOffOffice() {
-//        String office = "";
-//        return office;
-//    }
 }

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Customer {
@@ -8,6 +9,27 @@ public class Customer {
     public Customer(String dni, String name) {
         this.dni = dni;
         this.name = name;
+        this.rentals = new ArrayList<>();
+    }
+
+    public void addRental(Rental rental) {
+        rentals.add(rental);
+    }
+
+    public int numberOfRentalsWithDifferentOffices() {
+        int count = 0;
+        Iterator<Rental> iterator = new RentalIterator(rentals); // Use iterator to traverse
+
+        while (iterator.hasNext()) {
+            Rental rental = iterator.next();
+            if (rental instanceof WebRental) { // Check if it is a WebRental
+                WebRental webRental = (WebRental) rental;
+                if (!webRental.getPickUpOffice().equals(webRental.getDeliveryOffice())) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     public String getDni() {
@@ -34,15 +56,4 @@ public class Customer {
         this.rentals = rentals;
     }
 
-    //    public void makesRental(){
-//        Rental rental = new Rental();
-//        rentals.add(rental);
-//    }
-
-//    public int numberOfRentalsWithDifferentOffices() {
-//        return (int) rentals.stream()
-//                .filter(rental -> rental instanceof WebRental)
-//                .filter(rental -> !rental.getPickUpOffice().equals(rental.getDropOffOffice()))
-//                .count();
-//    }
 }

@@ -2,11 +2,29 @@ import java.util.Date;
 
 public class WebRental extends Rental {
     private Integer deliveryTime; // Puede ser null si no está establecido
+    private RentalOffice pickUpOffice;
     private RentalOffice deliveryOffice;
 
     public WebRental(Date startDate, Date endDate, Customer customer, Car car, RentalOffice pickUpOffice, RentalOffice deliveryOffice) {
-        super(startDate, endDate, customer, car, pickUpOffice);
+        super(startDate, endDate, customer, car);
         this.deliveryTime = null; // Inicialmente null
+        this.pickUpOffice = pickUpOffice;
+        this.deliveryOffice = deliveryOffice;
+    }
+
+    public RentalOffice getPickUpOffice() {
+        return pickUpOffice;
+    }
+
+    public void setPickUpOffice(RentalOffice pickUpOffice) {
+        this.pickUpOffice = pickUpOffice;
+    }
+
+    public RentalOffice getDeliveryOffice() {
+        return deliveryOffice;
+    }
+
+    public void setDeliveryOffice(RentalOffice deliveryOffice) {
         this.deliveryOffice = deliveryOffice;
     }
 
