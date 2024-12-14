@@ -18,11 +18,11 @@ public class Customer {
 
     public int numberOfRentalsWithDifferentOffices() {
         int count = 0;
-        Iterator<Rental> iterator = new RentalIterator(rentals); // Use iterator to traverse
+        Iterator<Rental> iterator = new RentalIterator(rentals);
 
         while (iterator.hasNext()) {
             Rental rental = iterator.next();
-            if (rental instanceof WebRental) { // Check if it is a WebRental
+            if (rental instanceof WebRental) {
                 WebRental webRental = (WebRental) rental;
                 if (!webRental.getPickUpOffice().equals(webRental.getDeliveryOffice())) {
                     count++;

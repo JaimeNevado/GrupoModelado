@@ -1,13 +1,13 @@
 import java.util.Date;
 
 public class WebRental extends Rental {
-    private Integer deliveryTime; // Puede ser null si no está establecido
+    private Integer deliveryTime;
     private RentalOffice pickUpOffice;
     private RentalOffice deliveryOffice;
 
     public WebRental(Date startDate, Date endDate, Customer customer, Car car, RentalOffice pickUpOffice, RentalOffice deliveryOffice) {
         super(startDate, endDate, customer, car);
-        this.deliveryTime = null; // Inicialmente null
+        this.deliveryTime = null;
         this.pickUpOffice = pickUpOffice;
         this.deliveryOffice = deliveryOffice;
     }
