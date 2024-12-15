@@ -18,7 +18,7 @@ public class Customer {
 
     public int numberOfRentalsWithDifferentOffices() {
         int count = 0;
-        Iterator<Rental> iterator = new RentalIterator(rentals); // Use iterator to traverse
+        Iterator<Rental> iterator = new RentalIterator(this.rentals); // Use iterator to traverse
 
         while (iterator.hasNext()) {
             Rental rental = iterator.next();
