@@ -18,7 +18,7 @@ public class Customer {
 
     public int numberOfRentalsWithDifferentOffices() {
         int count = 0;
-        Iterator<Rental> iterator = new RentalIterator(rentals);
+        Iterator<Rental> iterator = new RentalIterator(this.rentals);
 
         while (iterator.hasNext()) {
             Rental rental = iterator.next();
