@@ -24,8 +24,8 @@ public class Car {
         state.takeOutOfService(this, backToServiceDate);
         List<Car> cars = model.getCars();
 
-        for (int i = 0; i < cars.size() && cars.get(i).state.getClass().equals(InServiceState.class); i++) {
-            if (cars.get(i).state.getClass().equals(InServiceState.class)) {
+        for (int i = 0; i < cars.size() && cars.get(i).state.getClass().equals(InServiceState.class) && cars.get(i).rentalOffice.equals(this.rentalOffice); i++) {
+            if (cars.get(i).state.getClass().equals(InServiceState.class) && cars.get(i).rentalOffice.equals(this.rentalOffice)) {
                 substitutionCar = cars.get(i);
             }
         }
