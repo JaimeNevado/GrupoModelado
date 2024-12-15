@@ -60,4 +60,12 @@ public abstract class Rental {
         this.car = car;
     }
 
+    public PromotionStrategy getPromotionStrategy() {
+        return promotionStrategy;
+    }
+
+    public void setPromotionStrategy(PromotionStrategy promotionStrategy) {
+        this.promotionStrategy = promotionStrategy;
+    }
+
 }

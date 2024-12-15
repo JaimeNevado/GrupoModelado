@@ -5,8 +5,8 @@ public class WebRental extends Rental {
     private RentalOffice pickUpOffice;
     private RentalOffice deliveryOffice;
 
-    public WebRental(Date startDate, Date endDate, Customer customer, Car car, RentalOffice pickUpOffice, RentalOffice deliveryOffice) {
-        super(startDate, endDate, customer, car);
+    public WebRental(Date startDate, Date endDate, Customer customer, Car car, RentalOffice pickUpOffice, RentalOffice deliveryOffice, PromotionStrategy promotionStrategy) {
+        super(startDate, endDate, customer, car, promotionStrategy);
         this.deliveryTime = null; // Inicialmente null
         this.pickUpOffice = pickUpOffice;
         this.deliveryOffice = deliveryOffice;
