@@ -12,6 +12,10 @@ public class Model {
         this.cars = new ArrayList<Car>();
     }
 
+    public void addCar(Car car) {
+        this.cars.add(car);
+    }
+
     public String getName() {
         return name;
     }

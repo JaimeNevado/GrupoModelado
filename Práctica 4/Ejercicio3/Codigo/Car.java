@@ -14,6 +14,7 @@ public class Car {
     public Car(String licensePlate, Model model, RentalOffice rentalOffice){
         this.licensePlate = licensePlate;
         this.model = model;
+        this.model.addCar(this);
         this.rentalOffice = rentalOffice;
         this.rentals = new ArrayList<Rental>();
         this.state = new InServiceState();
@@ -23,10 +24,12 @@ public class Car {
     public void takeOutOfService(Date backToServiceDate) {
         state.takeOutOfService(this, backToServiceDate);
         List<Car> cars = model.getCars();
+        boolean found = false;
 
-        for (int i = 0; i < cars.size() && cars.get(i).state.getClass().equals(InServiceState.class) && cars.get(i).rentalOffice.equals(this.rentalOffice); i++) {
+        for (int i = 0; i < cars.size() && !found; i++) {
             if (cars.get(i).state.getClass().equals(InServiceState.class) && cars.get(i).rentalOffice.equals(this.rentalOffice)) {
                 substitutionCar = cars.get(i);
+                found = true;
             }
         }
     }

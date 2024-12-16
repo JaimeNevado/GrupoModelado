@@ -16,8 +16,8 @@ public class Main {
 
         // Crear coches y asociarlos con oficinas y modelos
         Car car1 = new Car("ABC123", sedanModel, office1);
-        Car car2 = new Car("DEF456", sedanModel, office2);
-        Car car3 = new Car("GHI789", suvModel, office1);
+        Car car2 = new Car("DEF456", sedanModel, office1);
+        Car car3 = new Car("GHI789", suvModel, office2);
 
         // Agregar coches a las oficinas
         office1.getCars().add(car1);
@@ -69,10 +69,11 @@ public class Main {
         int differentOfficeRentals = customer.numberOfRentalsWithDifferentOffices();
         System.out.println("Número de alquileres con recogida y entrega en diferentes oficinas: " + differentOfficeRentals);
 
-        // Poner un coche fuera de servicio
+        // Poner un coche fuera de servicio y poner un sustituto
         car1.takeOutOfService(dateFormat.parse("2024-12-31"));
         System.out.println("¿El coche 1 está fuera de servicio? " + car1.isOutOfService());
         System.out.println("Fecha de regreso al servicio del coche 1: " + car1.getBackToServiceDate());
+        System.out.println("El coche de sustitución del coche 1 es: " + car1.getSubstitutionCar().getLicensePlate());
 
         // Intentar ponerlo fuera de servicio nuevamente
         car1.takeOutOfService(dateFormat.parse("2025-01-15"));
