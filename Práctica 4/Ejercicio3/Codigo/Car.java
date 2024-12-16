@@ -9,6 +9,7 @@ public class Car {
     private Model model;
     private State state;
     private Date backToServiceDate;
+    private Car substitutionCar;
 
     public Car(String licensePlate, Model model, RentalOffice rentalOffice){
         this.licensePlate = licensePlate;
@@ -16,10 +17,26 @@ public class Car {
         this.rentalOffice = rentalOffice;
         this.rentals = new ArrayList<Rental>();
         this.state = new InServiceState();
+        this.substitutionCar = null;
     }
 
     public void takeOutOfService(Date backToServiceDate) {
         state.takeOutOfService(this, backToServiceDate);
+        List<Car> cars = model.getCars();
+
+        for (int i = 0; i < cars.size() && cars.get(i).state.getClass().equals(InServiceState.class) && cars.get(i).rentalOffice.equals(this.rentalOffice); i++) {
+            if (cars.get(i).state.getClass().equals(InServiceState.class) && cars.get(i).rentalOffice.equals(this.rentalOffice)) {
+                substitutionCar = cars.get(i);
+            }
+        }
+    }
+
+    public Car getSubstitutionCar() {
+        return substitutionCar;
+    }
+
+    public void setSubstitutionCar(Car substitutionCar) {
+        this.substitutionCar = substitutionCar;
     }
 
     public boolean isOutOfService() {

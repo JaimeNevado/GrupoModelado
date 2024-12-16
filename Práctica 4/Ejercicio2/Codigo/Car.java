@@ -11,13 +11,13 @@ public class Car {
     private Date backToServiceDate;
     private Car substitutionCar;
 
-    public Car(String licensePlate, Model model, RentalOffice rentalOffice, Car substitutionCar){
+    public Car(String licensePlate, Model model, RentalOffice rentalOffice){
         this.licensePlate = licensePlate;
         this.model = model;
         this.rentalOffice = rentalOffice;
         this.rentals = new ArrayList<Rental>();
         this.state = new InServiceState();
-        this.substitutionCar = substitutionCar;
+        this.substitutionCar = null;
     }
 
     public void takeOutOfService(Date backToServiceDate) {
